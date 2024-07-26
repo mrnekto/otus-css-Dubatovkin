@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <header>
+        <h1>Mod</h1>
+        <nav>
+            <ul>
+              <li> <a href="Biography">Biography</a> </li>            
+              <li> <a href="Designers"><u>Designers</u></a> </li>
+              <li> <a href="Testimonials">Testimonials</a> </li>
+              <li> <a href="Strong points">Strong points</a> </li>
+              <!-- можно ли в якорной сслыке использовать пробелы? -->
+            </ul>
+          </nav>
+    </header>
+    <!-- создал блок который будет отображаться всегда на любой секции сайта, 
+     в нем добавил название сайта "Mod" (при нажатии будет перелистывать в самый верх), 
+     а также добавил блок навигации с якорными ссылками для быстрого скролинга
+     на соответствующие секции сайта (использовал неупорядоченный список) -->
+    
+
+    <main>
+        <div>
+            <img src="image/Hero-section.jpg" alt="Hero-section">
+            <div>
+                <p>Mod Studio</p>
+                <p>Modern Web Studio</p>
+            </div>
+        </div>
+        <!-- создал блок Hero section
+         в дальнейшем img будет заменен на backgroung через CSS -->
+
+
+        <section id="Biography">
+            <img src="image/Biography-Katya-Mills.jpg" alt="Biography-Katya-Mills">
+            <h3>Biography</h3>
+            <section>
+                <h2>Katya <br> Mills</h2>
+                <!-- использовал тег заголовка h2, так как использовал section -->
+                <p>Art Director <br> Scenography / Styling / Creative Photography / Design</p>
+                <div></div>
+                <!-- пустой div, далее через CSS будет создан черный прямоугольник над цитатой -->
+                <q>“The more I deal with the work <br>as something that is my own, 
+                    <br>as something that is personal, <br>the more successful it is.”</q>
+            </section>
+        </section>
+        <!-- создал блок Biography  -->
+
+        <section id="Designers">
+            <h3>Designers</h3>
+            <div>
+                <img src="image/Jess Wonder.png" alt="Jess Wonder">
+                <p>Jess Wonder</p>
+                <p>
+                    <span>From/</span>
+                    <span>Be more flower</span>
+                </p>
+                <p>
+                    <span>Skills/</span>
+                    <span>Design Strategy / Marketing</span> 
+                </p> 
+            </div>
+            <div>
+                <img src="image/Kameron Clein.jpg" alt="Kameron Clein">
+                <p>Kameron Clein</p>
+                <p>
+                    <span>From/</span>
+                    <span>Be more flower</span>
+                </p>
+                <p>
+                    <span>Skills/</span>
+                    <span>Design Strategy / Marketing</span> 
+                </p> 
+            </div>
+            <div>
+                <img src="image/Louisse Red.jpg" alt="Louisse Red">
+                <p>Louisse Red</p>
+                <p>
+                    <span>From/</span>
+                    <span>Be more flower</span>
+                </p>
+                <p>
+                    <span>Skills/</span>
+                    <span>Design Strategy / Marketing</span> 
+                </p> 
+            </div>
+            <div>
+                <img src="image/Kameron Clein.jpg" alt="Kameron Clein">
+                <p>Kameron Clein</p>
+                <p>
+                    <span>From/</span>
+                    <span>Be more flower</span>
+                </p>
+                <p>
+                    <span>Skills/</span>
+                    <span>Design Strategy / Marketing</span> 
+                </p> 
+            </div>
+        </section>
+        <!-- создал блок Designers -->
+
+        <section id="Testimonials">
+            <div>
+                <p>Creativity</p>
+                <a href="www.whitepapers.com">www.whitepapers.com</a> 
+            </div>
+            <div>
+                <p>Creativity</p>
+                <a href="www.whitepapers.com">www.whitepapers.com</a> 
+            </div>
+            <div>
+                <p>Website</p>
+                <a href="www.whitepapers.com">www.whitepapers.com</a> 
+            </div>
+            <img src="image/Testimonials-1.jpg" alt="Testimonials-1">
+            <h3>Testimonials</h3>
+            <p>I just really <br>want to do <br>good work 
+                <br>and work with <br>some great <br>people, people <br>who challenge <br>me.</p>
+                <!-- скорее всего нужно было использовать другой инструмент, так как при 
+                 масштабировании страницы текст должен переноситься по-другому -->
+            <img src="image/Testimonials-2.jpg" alt="Testimonials-2">
+        </section>
+        <!-- создал блок Testimonials -->
+
+        <section id="Strong points">
+            <h3>Strong points</h3>
+            <img src="image/Strong points-1.jpg" alt="Strong points-1">
+            <img src="image/Strong points-2.jpg" alt="Strong points-2">
+            <section>
+                <h2>Strengths</h2>
+                <ul>
+                    <li>Interiors</li>
+                    <li>Outdoors</li>
+                    <li>Portraits</li>
+                    <li>Styling</li>
+                    <li>Events</li>
+                    <li>Architecture</li>
+                    <li>Design</li>
+                    <li>Celebrations</li>
+                    <li>Fashion</li>
+                    <li>Nature</li>
+                </ul>
+            </section>
+            <img src="image/Strong points-3.jpg" alt="Strong points-3">
+        </section>
+        <!-- создал блок Strong points -->
+    </main>
+
+    <footer>
+        <address>
+            <a href="tel:+79211234567">+7 921 123-45-67</a><br>
+            <a href="mailto:info@modstudio.com">info@modstudio.com</a>
+        </address>
+         <img  src="image/Logo.svg" alt="Logo">
+         <!-- реализовал как логотип в формате SVG
+          но можно через див как ниже -->
+         <!--   <div>
+                    <p>
+                    <span>A product of</span>
+                    <span>MOD</span>
+                    </p>
+                </div> -->
+        <div>&#169;</div>
+        <p>2023 Mod Media. All rights reserved</p>
+    </footer>
+        
+</body>
+
+</html>
