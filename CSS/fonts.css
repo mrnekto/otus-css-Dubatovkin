@@ -1,0 +1,15 @@
+/* @font-face {
+    font-family: "Bitter Italic";
+    src: local("Bitter-Italic-VariableFont_wght"),
+    url("Fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf") format("ttf");
+    font-style: italic;
+   }
+   подключил локально расположенный Bitter (italic) */
+
+   @font-face {
+    font-family: "Bitter";
+    src: local("Bitter-VariableFont_wght"),
+    url("Fonts/Bitter/Bitter-VariableFont_wght.ttf") format("ttf");
+    font-style: normal;
+   }
+   /* подключил локально расположенный Bitter (normal) */
