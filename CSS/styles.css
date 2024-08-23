@@ -89,3 +89,35 @@ h1 {
 .hero-sect-txt-first, .hero-sect-txt-second {text-align: center; margin: 0}
 .hero-sect-txt-first {margin-bottom: 14px;}
 /* Использовал чисто отступы, display и position для верстки (в некоторых местах использовал calc для создания пропорционального расширения и сжатия). */
+
+#Biography {
+    width: 81%;
+    max-width: 1680px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    padding-top: 151px;}
+.img-katya {
+    width: 49%;
+    min-height: 600px;
+    object-fit: cover;}
+.biography-title {
+    height: 47px;
+    transform: rotate(-90deg) translateX(-30%);
+    margin-right: auto;}
+.biography-katya {
+    width: 39%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;}
+.biography-katya-quote-block {
+    max-width: 370px;
+    min-width: 275px;}
+.biography-katya-rectangle {
+    width: 20px;
+    height: 6px;
+    background-color: black;
+    margin-bottom: 18px;}
+/* Использовал чисто Flex для создания секции. */
