@@ -121,3 +121,55 @@ h1 {
     background-color: black;
     margin-bottom: 18px;}
 /* Использовал чисто Flex для создания секции. */
+
+#Testimonials {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;}
+    .testimonials-site {
+            display: grid;
+            grid-template-columns: 1fr 57px;
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 70px;
+            padding: 20px 0px;
+            align-items: center;
+            grid-column: 1 / 3;}
+        .testimonials-site-web {
+            height: 57px;
+            width: 190px;
+            grid-column: 2 / 3;}
+        .web-one {transform: rotateZ(-90deg) translate(2px, -58px);}
+        .web-two {transform: rotateZ(-90deg) translate(10px, -66px);}
+        .web-three {transform: rotateZ(-90deg) translate(20px, -67px);}
+    .img-testimonials {
+        object-fit: cover;
+        min-height: 760px;
+        grid-column: 3 / 7;}
+    .testimonials-title {
+        transform: rotateZ(-90deg) translateX(-100px);
+        height: 40px;
+        width: 40px;
+        grid-column: 7 / 8;}
+    .testimonials-reviews {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column: 8 / 12;}
+        .testimonials-reviews-txt {
+            box-sizing: content-box;
+            min-width: 216px;
+            max-width: 452px;
+            padding: 40px min(120px, calc(100% - 335px));
+            text-align: center;}
+        .img-testimonials-reviews {
+            margin-top: -1px;
+            margin-left: 3px;
+            justify-self: center;}
+ /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
+например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
