@@ -5,38 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-        <!-- подключил шрифты Playfair Display (вариативный) и Roboto(400,500,700,900) через Google Fonts -->
-    <link rel="stylesheet" href="CSS/fonts.css">
-    <!-- подключил файл инициации локально расположенного шрифта Bitter (вариативный) -->
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/reset.css"> 
+    <!-- Использовал файл reset.css для быстрого сброса всех стилей браузера. -->
+    <!-- <link rel="stylesheet" href="CSS/fonts.css"> -->
     <link rel="stylesheet" href="CSS/styles.css">
          
 
 
 </head>
 <body>
-    <!-- далее везде присвоил классы, при присваивании названия
-     старался отталкиваться от правила родитель-потомок (отец-сын-внук). 
-     В секциях с уже присвоенным ID (якорные ссылки) не задавал класс, 
-     а обращался по селектору ID .
-     Там где классы не нужны обращался по селектору тега 
-     и класс в приниципе не присваивал (например h1, h2)-->
-   
-    <header>
-        <h1>Mod</h1>
-        <nav class="header-nav">
-            <ul class="header-nav-ul" >
-              <li> <a href="#Biography">Biography</a> </li>            
-              <li> <a href="#Designers"><u>Designers</u></a> </li>
-              <li> <a href="#Testimonials">Testimonials</a> </li>
-              <li> <a href="#StrongPoints">Strong points</a> </li>
-            </ul>
-        </nav>
-    </header>
 
-    
+    <header>  
+            <h1>Mod</h1>
+            <nav class="header-nav">
+                <ul class="header-nav-ul" >
+                <li> <a href="#Biography">Biography</a> </li>            
+                <li> <a href="#Designers">Designers</a> </li>
+                <li> <a href="#Testimonials">Testimonials</a> </li>
+                <li> <a href="#StrongPoints">Strong points</a> </li>
+                </ul>
+            </nav>
+    </header>
 
     <main>
         <div class="hero-sect">
@@ -52,30 +47,32 @@
             <section class="biography-katya">
                 <h2 class="biography-katya-title">Katya <br> Mills</h2>
                 <p class="biography-katya-art">Art Director <br> Scenography / Styling / Creative Photography / Design</p>
-                <div class="biography-katya-rectangle"></div>
-                <q class="biography-katya-quote">The more I deal with the work <br>as something that is my own, 
-                    <br>as something that is personal, <br>the more successful it is.</q>
+                <div class="biography-katya-quote-block">
+                    <div class="biography-katya-rectangle"></div>
+                    <q class="biography-katya-quote">The more I deal with the work as something that is my own, 
+                        as something that is personal, the more successful it is.</q>
+                </div>
             </section>
         </section>
 
         <section id="Designers">
             <h3 class="designers-title">Designers</h3>
             <div class="designers-list">
+                <img class="img-jess" src="image/Jess Wonder.png" alt="Jess Wonder">
                 <div class="designers-jess">
-                    <img class="img-jess" src="image/Jess Wonder.png" alt="Jess Wonder">
                     <p class="designers-name">Jess Wonder</p>
                     <p class="designers-from">
-                        <span class="designers-span">From/</span>
-                        <span>Be more flower</span>
+                     <span class="designers-span">From/</span>
+                     <span>Be more flower</span>
                     </p>
                     <p class="designers-skills">
                         <span class="designers-span">Skills/</span>
                         <span>Design Strategy / Marketing</span> 
-                    </p> 
+                    </p>
                 </div>
 
+                <img class="img-kameron" src="image/Kameron Clein.jpg" alt="Kameron Clein">
                 <div class="designers-kameron">
-                    <img class="img-kameron" src="image/Kameron Clein.jpg" alt="Kameron Clein">
                     <p class="designers-name">Kameron Clein</p>
                     <p class="designers-from">
                         <span class="designers-span">From/</span>
@@ -87,8 +84,8 @@
                     </p>  
                 </div>
 
+                <img class="img-louisse" src="image/Louisse Red.jpg" alt="Louisse Red">
                 <div class="designers-louisse">
-                    <img class="img-louisse" src="image/Louisse Red.jpg" alt="Louisse Red">
                     <p class="designers-name">Louisse Red</p>
                     <p class="designers-from">
                         <span class="designers-span">From/</span>
@@ -100,8 +97,8 @@
                     </p> 
                 </div>
 
-                <div class="designers-kameron">
-                    <img class="img-kameron" src="image/Kameron Clein.jpg" alt="Kameron Clein">
+                <img class="img-kameron-two" src="image/Kameron Clein.jpg" alt="Kameron Clein">
+                <div class="designers-kameron-two">
                     <p class="designers-name">Kameron Clein</p>
                     <p class="designers-from">
                         <span class="designers-span">From/</span>
@@ -117,19 +114,19 @@
 
         <section id="Testimonials">
             <div class="testimonials-site">
-                <div class="testimonials-site-web">
-                    <p>Creativity</p>
-                    <a href="www.whitepapers.com">www.whitepapers.com</a> 
+                <div class="testimonials-site-web web-one">
+                    <p> Website </p>
+                    <a href="www.whitepapers.com"> www.whitepapers.com </a> 
+                </div> 
+                <div class="testimonials-site-web web-two">
+                    <p> Creativity </p>
+                    <a href="www.whitepapers.com"> www.whitepapers.com </a> 
                 </div>
-                <div class="testimonials-site-web">
-                    <p>Creativity</p>
-                    <a href="www.whitepapers.com">www.whitepapers.com</a> 
+                <div class="testimonials-site-web web-three">
+                    <p> Creativity </p>
+                    <a href="www.whitepapers.com"> www.whitepapers.com </a> 
                 </div>
-                <div class="testimonials-site-web">
-                    <p>Website</p>
-                    <a href="www.whitepapers.com">www.whitepapers.com</a> 
-                </div>  
-            </div>
+            </div>     
             <img class="img-testimonials" src="image/Testimonials-1.jpg" alt="Testimonials-1">
             <h3 class="testimonials-title">Testimonials</h3>
             <div class="testimonials-reviews">
@@ -140,24 +137,27 @@
 
         <section id="StrongPoints">
             <h3 class="str-point-title">Strong points</h3>
-            <img class="img-str-point-first" src="image/Strong points-1.jpg" alt="Strong points-1">
-            <img class="img-str-point-second" src="image/Strong points-2.jpg" alt="Strong points-2">
-            <section class="str-point-strengths">
-                <h2 class="str-point-strengths-title">Strengths</h2>
-                <ul class="str-point-strengths-ul">
-                    <li>Interiors</li>
-                    <li>Outdoors</li>
-                    <li>Portraits</li>
-                    <li>Styling</li>
-                    <li>Events</li>
-                    <li>Architecture</li>
-                    <li>Design</li>
-                    <li>Celebrations</li>
-                    <li>Fashion</li>
-                    <li>Nature</li>
-                </ul>
-            </section>
-            <img  class="img-str-point-third" src="image/Strong points-3.jpg" alt="Strong points-3">
+            <div class="str-point-list">
+                <img class="img-str-point-one" src="image/Strong points-1.jpg" alt="Strong points-1">
+                <img class="img-str-point-two" src="image/Strong points-2.jpg" alt="Strong points-2">
+                <section class="str-point-strengths">
+                    <h2 class="str-point-strengths-title">Strengths</h2>
+                    <ul class="str-point-strengths-ul">
+                        <li>Interiors</li>
+                        <li>Outdoors</li>
+                        <li>Portraits</li>
+                        <li>Styling</li>
+                        <li>Events</li>
+                        <li>Architecture</li>
+                        <li>Design</li>
+                        <li>Celebrations</li>
+                        <li>Fashion</li>
+                        <li>Nature</li>
+                    </ul>
+                </section>
+                <img  class="img-str-point-three" src="image/Strong points-3.jpg" alt="Strong points-3">
+                <img class="img-str-point-four" src="image/Strong points-2.jpg" alt="Strong points-2">
+            </div>    
         </section>
     </main>
 
@@ -170,7 +170,7 @@
             <span class="footer-logo--text-first">A product of</span>
             <span class="footer-logo-text-second">MOD</span>
         </div>
-        <p class="footer-rights"> <span>&#169;</span> 2023 Mod Media. All rights reserved</p>
+        <p class="footer-rights-1"><span>&#169;</span> 2023 Mod Media. All rights reserved</p>
     </footer>
         
 </body>

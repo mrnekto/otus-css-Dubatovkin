@@ -1,49 +1,91 @@
 html {
     width: 100%;
-    height: 100%;
-    min-width: 1440px;
+    min-width: 900px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     font-style: normal;}
-    /* основным шрифтом для документа выбрал Roboto 400
-    размер стандартный для браузера 16px*/ 
-
-.hero-sect {
-    background-image: url(../image/Hero-section.jpg);
-    background-size: no-repeat;}
-
 
 h1, h2, .hero-sect-txt-first {font-family: "Playfair Display", serif;}
-.biography-katya-quote, .testimonials-reviews-txt, .str-point-strengths-ul {font-family: "Bitter", serif;}
-    /* задал шрифты текстовым элементам */
+.biography-katya-quote, .testimonials-reviews-txt, .str-point-strengths-ul {font-family: "Bitter", serif; font-weight: 400;}
+
 
 .header-nav-ul, .hero-sect-txt, h2, .biography-katya-art, .footer-logo--text-first {font-weight: 500;}
 h1 {font-weight: 600;}
 h3, .designers-name, .designers-span {font-weight: 700;}
 .testimonials-site-web > p {font-weight: 700;}
 .footer-logo-text-second {font-weight: 900;}
-    /* задал жирность текстовым элементам */
 
-.designers-list, .testimonials-site, .footer-address, .footer-rights {font-size: 1rem;}
+
+.designers-list, .testimonials-site-web, .footer-address, .footer-rights {font-size: 1rem;}
 .biography-katya-art, .footer-logo--text-first {font-size: 1.125rem;}    
 .hero-sect-txt-second {font-size: 1.25rem;}
-.header-nav-ul, h3, .footer-logo-text-second {font-size: 1.5rem;}
+.header-nav-ul {font-size: 0px;}  /* добавил для того чтобы в дальнейшем не было отступов (когда буду задавать margin для .header-nav-ul li {}) */
+.header-nav-ul li, h3, .footer-logo-text-second {font-size: 1.5rem;}
 .biography-katya-quote {font-size: 1.625rem;} 
 .testimonials-reviews-txt {font-size: 2rem;}
 .str-point-strengths-ul {font-size: 2.125rem;}
 h1, h2, .hero-sect-txt-first {font-size: 5.375rem;}
-    /* задал размер текста текстовым элементам 
-    использовал rem и отталкивался от заданного 16px*/ 
+ 
 
 .str-point-strengths-title {line-height: 100%;}
 h1, .hero-sect-txt-first, .biography-katya-quote, 
-.testimonials-reviews-txt, .str-point-strengths-ul {line-height: 120%;}
+.testimonials-reviews-txt {line-height: 120%;}
 .header-nav-ul, .hero-sect-txt-second, h3, .biography-katya-art, .designers-list, 
-.testimonials-site, .footer-logo, .footer-rights {line-height: 117.2%;}
+.testimonials-site-web, .footer-logo, .footer-rights {line-height: 117.2%;}
 .biography-katya-title {line-height: 133.3%;}
 .footer-address {line-height: 162.5%;}
-    /* задал интерлиньяж текстовым элементам 
-    (не знаю можно ли использовать дробные значения в процентах).
-    Хоть line-height и наследуемый, при указании свойства line-height для тега html (в процентах) 
-    в дальнейшем работает некорректно (отсчитываются от базовых 16рх, а не от заданного размера блока)*/
+.str-point-strengths-ul li {line-height: 124%;} /* немного изменил интер-линьяж чтобы подогнать под макет */
+
+header {
+    background-color: #ffffff;
+    position: fixed;  
+    width: 100%;
+    height: 135px;    
+    top: 0; 
+    z-index: 110;}   
+h1 {
+    margin-left: max(23px, calc(40% - 553px));
+    display:inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);}
+.header-nav {
+    margin-right: max(22px, calc(40% - 554px));
+    display:inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);}
+.header-nav-ul li {
+    display:inline-block;
+    margin-left: calc(100vw / 26)}
+
+.hero-sect {
+    background-color: #d6d4d0;  /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
+    background-image: url(../image/Hero-section.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 630px;
+    margin-top: 135px;
+    position: relative;}
+.hero-sect-txt {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin: auto;
+    width: 48%;
+    min-width: 690px;
+    max-width: 900px;
+    min-height:360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 110px;
+    padding-bottom: 110px;}
+.hero-sect-txt-first, .hero-sect-txt-second {text-align: center; margin: 0}
+.hero-sect-txt-first {margin-bottom: 14px;}
+/* Использовал чисто отступы, display и position для верстки (в некоторых местах использовал calc для создания пропорционального расширения и сжатия). */
