@@ -61,6 +61,13 @@ h1 {
 .header-nav-ul li {
     display:inline-block;
     margin-left: calc(100vw / 26)}
+.header-nav-ul li a {
+        color: #000;
+        text-decoration: none;}
+    .header-nav-ul li a:hover {
+        color: #000;
+        cursor: pointer;
+        text-decoration: underline #000;}    
 
 .hero-sect {
     background-color: #d6d4d0;  /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
@@ -203,9 +210,12 @@ h1 {
             align-items: center;
             grid-column: 1 / 3;}
         .testimonials-site-web {
-            height: 57px;
-            width: 190px;
-            grid-column: 2 / 3;}
+                height: 57px;
+                width: 190px;
+                grid-column: 2 / 3;}
+            .testimonials-site-web a {
+                color: #000;
+                text-decoration: none;}
         .web-one {transform: rotateZ(-90deg) translate(2px, -58px);}
         .web-two {transform: rotateZ(-90deg) translate(10px, -66px);}
         .web-three {transform: rotateZ(-90deg) translate(20px, -67px);}
@@ -235,65 +245,6 @@ h1 {
             justify-self: center;}
  /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
 например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
-
-/* #StrongPoints {
-    width: 100%;
-    max-width: 1680px;
-    margin: auto;
-    padding-top: 136px;}
-.str-point-title {
-    height: 58px;
-    margin-left: 258px;}
-.str-point-list {
-        display: flex;
-        overflow-x: scroll;
-        column-gap: 20px;
-        margin: 0px 20px;}   
-    .str-point-strengths-title {
-        text-align: center;
-        width: 451px;}
-    .str-point-strengths-ul {
-        text-align: left;
-        padding: 28px 117px 0px 117px; } */
-/* Написанный на Flex */
-
-/* #StrongPoints {
-        width: 100%;
-        max-width: 1680px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 58px 1fr;
-        padding-top: 136px;}
-    .str-point-title {
-        margin-left: 258px;
-        grid-row: 1 / 2;}
-    .str-point-list {
-            grid-row: 2 / 3;
-            display: grid;
-            overflow-x: scroll;
-            grid-template-columns: repeat(auto-fill, minmax(98.33px, 1fr));
-            grid-auto-columns: minmax(98.33px, 1fr);
-            grid-template-rows: 555px; 
-            grid-auto-flow: column;
-            column-gap: 20px;
-            margin: 0 20px;}   
-        .img-str-point-one {
-            grid-column: 1 / span 3;}
-        .img-str-point-two {
-            grid-column: 4 / span 3;}
-        .str-point-strengths {
-            grid-column: 7 / span 4;}
-            .str-point-strengths-title {
-                text-align: center;}
-            .str-point-strengths-ul {
-                text-align: left;
-                padding: 28px 117px 0px 117px; }
-        .img-str-point-three {
-            grid-column: 11 / span 3;}
-        .img-str-point-four {
-            grid-column: 14 / span 3;} */
-/* Написанный на Grid */
 
 #StrongPoints {
     width: 100%;
@@ -334,15 +285,7 @@ h1 {
         grid-column: 11 / span 3;}
     .img-str-point-four {
         grid-column: 14 / span 3;}
-/* Написан на Grid и выполнен Fallback для Flex. 
-Проверил через DevTools - все работает (отключал display:drig для элементов) */
-
-/* В описании ДЗ написано просто выбрать и обосновать, в задании на вебинаре было сказано сверстать Grid-ом и сделать 
-Fallback для Flex, поэтому разнёс по разным блокам, чтобы можно было закомментироваь и проверить (также есть совмещенный вариант).  
-Также как в секции Designers обернул все в контейнер с классом str-point-list и вынес заголовок за него 
-для того, чтобы при скролле заголовок оставался на месте и не скролился вместе с карточками. */
-
-
+/* Написан на Grid и выполнен Fallback для Flex.  */
 
 footer {
     width: 100%;
@@ -355,9 +298,11 @@ footer {
     column-gap: 20px;
     margin-top: 150px;}
 .footer-address {
-    text-transform: uppercase;
-    width: max(273px, 20%);
-    margin-left: max(20px, calc(40% - 556px));}  
+        text-transform: uppercase;
+        width: max(273px, 20%);
+        margin-left: max(20px, calc(40% - 556px));}  
+    .footer-address a {
+        color: #ffffff;}
 .footer-rights-1 {
     text-align: right;
     width: max(273px, 20%);
