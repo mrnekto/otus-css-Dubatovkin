@@ -302,7 +302,10 @@ footer {
         width: max(273px, 20%);
         margin-left: max(20px, calc(40% - 556px));}  
     .footer-address a {
-        color: #ffffff;}
+        color: #ffffff;
+        text-decoration: underline #ffffff;}
+    .footer-address a:hover {
+        text-decoration: none;}
 .footer-rights-1 {
     text-align: right;
     width: max(273px, 20%);
