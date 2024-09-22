@@ -1,0 +1,30 @@
+.biography {
+    width: 81%;
+    max-width: 1680px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding-top: 151px;}
+.biography__img {
+    width: 49%;
+    min-height: 600px;
+    object-fit: cover;}
+.biography__title {
+    height: 47px;
+    transform: rotate(-90deg) translateX(-30%);
+    margin-right: auto;}
+.biography__sect {
+    width: 39%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;}
+.biography__quote-sect {
+    max-width: 370px;}
+.biography__rectangle {
+    width: 20px;
+    height: 6px;
+    background-color: black;
+    margin-bottom: 18px;}
+/* Использовал чисто Flex для создания секции. */

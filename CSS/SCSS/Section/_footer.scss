@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    height: 168px;
+    background-color: #000000;
+    color: #ffffff;  
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    margin-top: 150px;
+}
+.footer__address {
+    width: max(273px, 20%);
+    margin-left: max(20px, calc(40% - 556px));
+}  
+.footer__rights {
+    text-align: right;
+    width: max(273px, 20%);
+    margin-right: max(24px, calc(40% - 552px));
+}
+/* Для верстки использовал Flex, так как это самый простой способ  */

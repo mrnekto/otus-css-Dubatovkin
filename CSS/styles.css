@@ -1,313 +1,853 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: "Bitter";
+  src: url("Fonts/Bitter/Bitter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 html {
-    width: 100%;
-    min-width: 900px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;}
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
 
-h1, h2, .hero-sect-txt-first {font-family: "Playfair Display", serif;}
-.biography-katya-quote, .testimonials-reviews-txt, .str-point-strengths-ul {font-family: "Bitter", serif; font-weight: 400;}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
 
-
-.header-nav-ul, .hero-sect-txt, h2, .biography-katya-art, .footer-logo--text-first {font-weight: 500;}
-h1 {font-weight: 600;}
-h3, .designers-name, .designers-span {font-weight: 700;}
-.testimonials-site-web > p {font-weight: 700;}
-.footer-logo-text-second {font-weight: 900;}
-
-
-.designers-list, .testimonials-site-web, .footer-address, .footer-rights {font-size: 1rem;}
-.biography-katya-art, .footer-logo--text-first {font-size: 1.125rem;}    
-.hero-sect-txt-second {font-size: 1.25rem;}
-.header-nav-ul {font-size: 0px;}  /* добавил для того чтобы в дальнейшем не было отступов (когда буду задавать margin для .header-nav-ul li {}) */
-.header-nav-ul li, h3, .footer-logo-text-second {font-size: 1.5rem;}
-.biography-katya-quote {font-size: 1.625rem;} 
-.testimonials-reviews-txt {font-size: 2rem;}
-.str-point-strengths-ul {font-size: 2.125rem;}
-h1, h2, .hero-sect-txt-first {font-size: 5.375rem;}
- 
-
-.str-point-strengths-title {line-height: 100%;}
-h1, .hero-sect-txt-first, .biography-katya-quote, 
-.testimonials-reviews-txt {line-height: 120%;}
-.header-nav-ul, .hero-sect-txt-second, h3, .biography-katya-art, .designers-list, 
-.testimonials-site-web, .footer-logo, .footer-rights {line-height: 117.2%;}
-.biography-katya-title {line-height: 133.3%;}
-.footer-address {line-height: 162.5%;}
-.str-point-strengths-ul li {line-height: 124%;} /* немного изменил интер-линьяж чтобы подогнать под макет */
+main {
+  flex-grow: 1;
+}
 
 header {
-    background-color: #ffffff;
-    position: fixed;  
-    width: 100%;
-    height: 135px;    
-    top: 0; 
-    z-index: 110;}   
-h1 {
-    margin-left: max(23px, calc(40% - 553px));
-    display:inline-block;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);}
-.header-nav {
-    margin-right: max(22px, calc(40% - 554px));
-    display:inline-block;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translate(0%, -50%);}
-.header-nav-ul li {
-    display:inline-block;
-    margin-left: calc(100vw / 26)}
-.header-nav-ul li a {
-        color: #000;
-        text-decoration: none;}
-    .header-nav-ul li a:hover {
-        color: #000;
-        cursor: pointer;
-        text-decoration: underline #000;}    
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 135px;
+  top: 0;
+  z-index: 110;
+}
 
-.hero-sect {
-    background-color: #d6d4d0;  /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
-    background-image: url(../image/Hero-section.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    min-height: 630px;
-    margin-top: 135px;
-    position: relative;}
-.hero-sect-txt {
-    box-sizing: border-box;
-    background-color: #ffffff;
-    margin: auto;
-    width: 48%;
-    min-width: 690px;
-    max-width: 900px;
-    min-height:360px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 110px;
-    padding-bottom: 110px;}
-.hero-sect-txt-first, .hero-sect-txt-second {text-align: center; margin: 0}
-.hero-sect-txt-first {margin-bottom: 14px;}
+.header__title {
+  margin-left: max(23px, 40% - 553px);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+
+.nav {
+  margin-right: max(22px, 40% - 554px);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+}
+
+.nav__item {
+  display: inline-block;
+  margin-left: 3.8461538462vw;
+}
+
+.hero {
+  background-color: #d6d4d0; /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
+  background-image: url(../image/Hero-section.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 630px;
+  margin-top: 135px;
+  position: relative;
+}
+
+.hero__txt-block {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin: auto;
+  width: max(690px, 20% + 402px);
+  min-height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.hero__txt {
+  text-align: center;
+  margin: 0;
+}
+
+.hero__txt_first {
+  margin-bottom: 14px;
+}
+
 /* Использовал чисто отступы, display и position для верстки (в некоторых местах использовал calc для создания пропорционального расширения и сжатия). */
+.biography {
+  width: 81%;
+  max-width: 1680px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding-top: 151px;
+}
 
-#Biography {
-    width: 81%;
-    max-width: 1680px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: auto;
-    padding-top: 151px;}
-.img-katya {
-    width: 49%;
-    min-height: 600px;
-    object-fit: cover;}
-.biography-title {
-    height: 47px;
-    transform: rotate(-90deg) translateX(-30%);
-    margin-right: auto;}
-.biography-katya {
-    width: 39%;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 36px;}
-.biography-katya-quote-block {
-    max-width: 370px;
-    min-width: 275px;}
-.biography-katya-rectangle {
-    width: 20px;
-    height: 6px;
-    background-color: black;
-    margin-bottom: 18px;}
+.biography__img {
+  width: 49%;
+  min-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.biography__title {
+  height: 47px;
+  transform: rotate(-90deg) translateX(-30%);
+  margin-right: auto;
+}
+
+.biography__sect {
+  width: 39%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.biography__quote-sect {
+  max-width: 370px;
+}
+
+.biography__rectangle {
+  width: 20px;
+  height: 6px;
+  background-color: black;
+  margin-bottom: 18px;
+}
+
 /* Использовал чисто Flex для создания секции. */
+.designers {
+  padding-top: 148px;
+}
 
-#Designers {
-    width: 100%;
-    max-width: 1680px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 58px 1fr;
-    padding-top: 148px;}
-.designers-name {text-transform: uppercase;}
-.designers-title {
-        margin-left: 139px;
-        grid-row: 1 / 2;}  
-.designers-list {                           
-        grid-row: 2 / 3;
-        display: grid;
-        overflow-x: scroll;
-        grid-template-columns: repeat(auto-fill, minmax(98.33px, 1fr));
-        grid-auto-columns: minmax(98.33px, 1fr);
-        grid-template-rows: 99px 439px 81px; 
-        grid-auto-flow: column;
-        column-gap: 20px;
-        margin: 0 20px;}  
-    .img-jess { 
-        grid-row: 1 / 3;
-        grid-column: 1 / 6;}
-    .designers-jess {
-        grid-row: 3 / 4;
-        grid-column: 3 / 6;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;}
-    .img-kameron {
-        grid-row: 2 / 3;
-        grid-column: 6 / 9;}
-    .designers-kameron {
-        grid-row: 3 / 4;
-        grid-column: 6 / 9;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;}
-    .img-louisse {
-        grid-row: 2 / 3;
-        grid-column: 9 / 12;  }
-    .designers-louisse {
-        grid-row: 3 / 4;
-        grid-column: 9 / 12;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;}
-    .img-kameron-two {
-        grid-row: 2 / 3;
-        grid-column: 12 / 15;}
-    .designers-kameron-two {
-        grid-row: 3 / 4;
-        grid-column: 12 / 15;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;}
+.designers__title {
+  margin-left: max(139px, 40vw - 437px);
+  padding-bottom: 30px;
+}
+
+.designers__list {
+  max-width: -moz-min-content;
+  max-width: min-content;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 98.33px);
+  grid-auto-columns: 98.33px;
+  grid-template-rows: 99px 439px 81px;
+  grid-auto-flow: column;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  overflow-x: auto;
+}
+
+.designers__img_jess {
+  grid-row: 1/3;
+  grid-column: 1/6;
+}
+
+.designers__block_jess {
+  grid-row: 3/4;
+  grid-column: 3/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.designers__img_kameron {
+  grid-row: 2/3;
+  grid-column: 6/9;
+}
+
+.designers__block_kameron {
+  grid-row: 3/4;
+  grid-column: 6/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.designers__img_louisse {
+  grid-row: 2/3;
+  grid-column: 9/12;
+}
+
+.designers__block_louisse {
+  grid-row: 3/4;
+  grid-column: 9/12;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.designers__img_kameron-two {
+  grid-row: 2/3;
+  grid-column: 12/15;
+}
+
+.designers__block_kameron-two {
+  grid-row: 3/4;
+  grid-column: 12/15;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 /* Секция сверстана с использованием Grid (для позиционирования блоков designers-NAME использовал flex).
 Вынес заголовок за designers-list для того, чтобы при скролле заголовок оставался на месте и 
 не скролился вместе с карточками.  */
+.testimonials {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
 
-#Testimonials {
-    width: 100%;
-    max-width: 1680px;
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 150px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 20px;}
-    .testimonials-site {
-            display: grid;
-            grid-template-columns: 1fr 57px;
-            grid-template-rows: repeat(3, 1fr);
-            row-gap: 70px;
-            padding: 20px 0px;
-            align-items: center;
-            grid-column: 1 / 3;}
-        .testimonials-site-web {
-                height: 57px;
-                width: 190px;
-                grid-column: 2 / 3;}
-            .testimonials-site-web a {
-                color: #000;
-                text-decoration: none;}
-        .web-one {transform: rotateZ(-90deg) translate(2px, -58px);}
-        .web-two {transform: rotateZ(-90deg) translate(10px, -66px);}
-        .web-three {transform: rotateZ(-90deg) translate(20px, -67px);}
-    .img-testimonials {
-        object-fit: cover;
-        min-height: 760px;
-        grid-column: 3 / 7;}
-    .testimonials-title {
-        transform: rotateZ(-90deg) translateX(-100px);
-        height: 40px;
-        width: 40px;
-        grid-column: 7 / 8;}
-    .testimonials-reviews {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            grid-column: 8 / 12;}
-        .testimonials-reviews-txt {
-            box-sizing: content-box;
-            min-width: 216px;
-            max-width: 452px;
-            padding: 40px min(120px, calc(100% - 335px));
-            text-align: center;}
-        .img-testimonials-reviews {
-            margin-top: -1px;
-            margin-left: 3px;
-            justify-self: center;}
- /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
+.site-block {
+  display: grid;
+  grid-template-columns: 1fr 57px;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 70px;
+  padding: 20px 0px;
+  align-items: center;
+  grid-column: 1/3;
+}
+
+.site-block__web {
+  height: 57px;
+  width: 190px;
+  grid-column: 2/3;
+  transform: rotateZ(-90deg) translate(2px, -58px);
+}
+
+.testimonials__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 760px;
+  grid-column: 3/7;
+}
+
+.testimonials__title {
+  transform: rotateZ(-90deg) translateX(-100px);
+  height: 40px;
+  width: 40px;
+  grid-column: 7/8;
+}
+
+.testimonials__reviews-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column: 8/12;
+}
+
+.testimonials__reviews-txt {
+  box-sizing: content-box;
+  min-width: 216px;
+  max-width: 452px;
+  padding: 40px min(120px, 100% - 335px);
+  text-align: center;
+}
+
+.testimonials__reviews-img {
+  margin-top: -1px;
+  margin-left: 3px;
+  justify-self: center;
+}
+
+/* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
 например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
+.str-point {
+  padding-top: 136px;
+}
 
-#StrongPoints {
-    width: 100%;
-    max-width: 1680px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 58px 1fr;
-    padding-top: 136px;}
-.str-point-title {
-    height: 58px;
-    margin-left: 258px;
-    grid-row: 1 / 2;}
-.str-point-list {
-        grid-row: 2 / 3;
-        display: flex;
-        display: grid;
-        overflow-x: scroll;
-        grid-template-columns: repeat(auto-fill, minmax(98.33px, 1fr));
-        grid-auto-columns: minmax(98.33px, 1fr);
-        grid-template-rows: 555px; 
-        grid-auto-flow: column;
-        column-gap: 20px;
-        margin: 0 20px;}   
-    .img-str-point-one {
-        grid-column: 1 / span 3;}
-    .img-str-point-two {
-        grid-column: 4 / span 3;}
-    .str-point-strengths {
-        grid-column: 7 / span 4;}
-        .str-point-strengths-title {
-            width: 453px;
-            text-align: center;}
-        .str-point-strengths-ul {
-            text-align: left;
-            padding: 28px 117px 0px 117px; }
-    .img-str-point-three {
-        grid-column: 11 / span 3;}
-    .img-str-point-four {
-        grid-column: 14 / span 3;}
+.str-point__title {
+  margin-left: max(258px, 40vw - 318px);
+  padding-bottom: 30px;
+}
+
+.str-point__list-block {
+  max-width: -moz-min-content;
+  max-width: min-content;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 98.33px);
+  grid-auto-columns: 98.33px;
+  grid-template-rows: 555px;
+  grid-auto-flow: column;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  overflow-x: auto;
+}
+
+.str-point__img-one {
+  grid-column: 1/span 3;
+}
+
+.str-point__img-two {
+  grid-column: 4/span 3;
+}
+
+.strengths-sect {
+  grid-column: 7/span 4;
+}
+
+.strengths-sect__title {
+  width: 453px;
+  text-align: center;
+}
+
+.strengths-sect__list {
+  text-align: left;
+  padding: 28px 117px 0px 117px;
+}
+
+.str-point__img-three {
+  grid-column: 11/span 3;
+}
+
+.str-point__img-four {
+  grid-column: 14/span 3;
+}
+
 /* Написан на Grid и выполнен Fallback для Flex.  */
+.footer {
+  width: 100%;
+  height: 168px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-top: 150px;
+}
 
-footer {
-    width: 100%;
-    height: 168px;
-    background-color: #000000;
-    color: #ffffff;  
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 20px;
-    margin-top: 150px;}
-.footer-address {
-        text-transform: uppercase;
-        width: max(273px, 20%);
-        margin-left: max(20px, calc(40% - 556px));}  
-    .footer-address a {
-        color: #ffffff;
-        text-decoration: underline #ffffff;}
-    .footer-address a:hover {
-        text-decoration: none;}
-.footer-rights-1 {
-    text-align: right;
-    width: max(273px, 20%);
-    margin-right: max(24px, calc(40% - 552px));}
+.footer__address {
+  width: max(273px, 20%);
+  margin-left: max(20px, 40% - 556px);
+}
+
+.footer__rights {
+  text-align: right;
+  width: max(273px, 20%);
+  margin-right: max(24px, 40% - 552px);
+}
+
 /* Для верстки использовал Flex, так как это самый простой способ  */
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-style: normal;
+}
+@media (max-width: 350px) {
+  html {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.header__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 86px;
+  line-height: 103.2px;
+}
+@media (max-width: 350px) {
+  .header__title {
+    display: none;
+  }
+}
+
+.nav__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.13px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+.nav__link:hover {
+  color: #000;
+  cursor: pointer;
+  -webkit-text-decoration: underline #000;
+          text-decoration: underline #000;
+}
+@media (max-width: 350px) {
+  .nav__link {
+    display: none;
+  }
+}
+
+.nav__link-mobile {
+  display: none;
+}
+@media (max-width: 350px) {
+  .nav__link-mobile {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+  }
+}
+@media (max-width: 350px) and (max-width: 350px) {
+  .nav__link-mobile {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 350px) {
+  .nav__link-mobile:hover {
+    color: #000;
+    cursor: pointer;
+    -webkit-text-decoration: underline #000;
+            text-decoration: underline #000;
+    font-weight: 700;
+  }
+}
+
+.hero__txt_first {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 86px;
+  line-height: 103.2px;
+}
+@media (max-width: 350px) {
+  .hero__txt_first {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 93.31px;
+  }
+}
+
+.hero__txt_second {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23.44px;
+}
+@media (max-width: 350px) {
+  .hero__txt_second {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.biography__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+@media (max-width: 350px) {
+  .biography__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.biography__sect-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 86px;
+  line-height: 114.64px;
+}
+@media (max-width: 350px) {
+  .biography__sect-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 85.31px;
+  }
+}
+
+.biography__art {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
+}
+@media (max-width: 350px) {
+  .biography__art {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.biography__quote {
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31.2px;
+}
+@media (max-width: 350px) {
+  .biography__quote {
+    font-family: "Bitter", serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.designers__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+@media (max-width: 350px) {
+  .designers__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.designers__name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+  text-transform: uppercase;
+}
+@media (max-width: 350px) {
+  .designers__name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
+
+.designers__span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+@media (max-width: 350px) {
+  .designers__span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
+
+.designers__span_bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+@media (max-width: 350px) {
+  .designers__span_bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
+
+.site-block__txt {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+@media (max-width: 350px) {
+  .site-block__txt {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
+
+.site-block__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #000;
+  text-decoration: none;
+}
+@media (max-width: 350px) {
+  .site-block__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
+
+.testimonials__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+@media (max-width: 350px) {
+  .testimonials__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.testimonials__reviews-txt {
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38.4px;
+}
+@media (max-width: 350px) {
+  .testimonials__reviews-txt {
+    font-family: "Bitter", serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.str-point__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+@media (max-width: 350px) {
+  .str-point__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.strengths-sect__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 86px;
+  line-height: 86px;
+}
+@media (max-width: 350px) {
+  .strengths-sect__title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 46px;
+  }
+}
+
+.strengths-sect__item {
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40.8px;
+}
+@media (max-width: 350px) {
+  .strengths-sect__item {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+}
+
+.footer__address {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+@media (max-width: 350px) {
+  .footer__address {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.footer__address-link {
+  color: #ffffff;
+  -webkit-text-decoration: underline #ffffff;
+          text-decoration: underline #ffffff;
+}
+.footer__address:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__logo-span-first {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
+}
+@media (max-width: 350px) {
+  .footer__logo-span-first {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+
+.footer__logo-span-second {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+@media (max-width: 350px) {
+  .footer__logo-span-second {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28.13px;
+  }
+}
+
+.footer__rights {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+@media (max-width: 350px) {
+  .footer__rights {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}/*# sourceMappingURL=styles.css.map */

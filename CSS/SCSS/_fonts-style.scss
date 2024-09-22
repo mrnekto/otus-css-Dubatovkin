@@ -1,0 +1,169 @@
+
+// Перечислением классов не буду заниматься, напишу для каждого элемента отдельно правила (так в дальнейшем при необходимости будет легче что-то менять для конкретного элемента);
+// Отдельно миксин для ПК версии (без медиазапроса); @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 16px);
+// Отдельно миксин для мобильной версии (в нем прописан медиазапрос); @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 16px);
+// Отдельно миксин для планшетной версии - буду использовать при необходимости (в нем прописан медиазапрос); @include fonts-style-tablet ("Roboto", sans-serif, 400, 16px, 16px);
+
+html {
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 16px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 16px);
+    font-style: normal;  
+}
+
+.header__title {
+    @include fonts-style-desktop ("Playfair Display", serif, 600, 86px, 103.2px);
+    @media (max-width: 350px) {
+        display: none;
+    }
+}
+
+.nav__link {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 24px, 28.13px);
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    &:hover {
+        color: #000;
+        cursor: pointer;
+        text-decoration: underline #000;
+    }
+    @media (max-width: 350px) {
+        display: none;
+    }
+}
+
+
+.nav__link-mobile {
+    display: none;
+    @media (max-width: 350px) {
+        @include fonts-style-mobile ("Bitter", serif, 400, 40px, 48px); 
+        display: inline-block;  
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline #000;
+            font-weight: 700;
+            }
+    }
+}
+
+
+.hero__txt_first {
+    @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 103.2px);
+    @include fonts-style-mobile ("Playfair Display", serif, 400, 70px, 93.31px);
+}
+
+.hero__txt_second {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 20px, 23.44px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px);
+}
+
+.biography__title {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
+}
+
+.biography__sect-title {
+    @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 114.64px);
+    @include fonts-style-mobile ("Playfair Display", serif, 400, 64px, 85.31px);
+}
+
+.biography__art {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
+} 
+
+.biography__quote {
+    @include fonts-style-desktop ("Bitter", serif, 400, 26px, 31.2px);
+    @include fonts-style-mobile ("Bitter", serif, 300, 30px, 36px);
+} 
+
+.designers__title {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
+} 
+
+.designers__name {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 16px, 18.75px); //можно удалить
+    text-transform: uppercase;
+}
+
+.designers__span{
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 18.75px); //можно удалить
+} 
+
+.designers__span_bold{
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 16px, 18.75px); //можно удалить
+} 
+ 
+.site-block__txt {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 16px, 18.75px); //можно удалить
+} 
+
+.site-block__link {
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 18.75px); //можно удалить
+    color: #000;
+    text-decoration: none;
+} 
+ 
+.testimonials__title {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
+} 
+ 
+.testimonials__reviews-txt {
+    @include fonts-style-desktop ("Bitter", serif, 400, 32px, 38.4px);
+    @include fonts-style-mobile ("Bitter", serif, 300, 30px, 36px);
+} 
+ 
+.str-point__title {
+    @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
+} 
+ 
+.strengths-sect__title {
+    @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 86px);
+    @include fonts-style-mobile ("Playfair Display", serif, 400, 46px, 46px);
+} 
+ 
+.strengths-sect__item {
+    @include fonts-style-desktop ("Bitter", serif, 400, 34px, 40.8px);
+    @include fonts-style-mobile ("Bitter", serif, 400, 24px, 28.8px);
+} 
+ 
+.footer__address {
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 26px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 26px); //можно удалить
+    text-transform: uppercase;
+    
+    &-link {
+        color: #ffffff;
+        text-decoration: underline #ffffff;
+    }
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.footer__logo-span-first {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
+} 
+ 
+.footer__logo-span-second {
+    @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить
+} 
+ 
+.footer__rights {
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 18.75px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 18.75px); //можно удалить
+} 
