@@ -2,17 +2,18 @@
 // Перечислением классов не буду заниматься, напишу для каждого элемента отдельно правила (так в дальнейшем при необходимости будет легче что-то менять для конкретного элемента);
 // Отдельно миксин для ПК версии (без медиазапроса); @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 16px);
 // Отдельно миксин для мобильной версии (в нем прописан медиазапрос); @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 16px);
+// Создал дополнительно миксин для hero__txt_first (при ширине 358px не умещалось, на 358 уменьшаю текст немного)
 // Отдельно миксин для планшетной версии - буду использовать при необходимости (в нем прописан медиазапрос); @include fonts-style-tablet ("Roboto", sans-serif, 400, 16px, 16px);
 
 html {
-    @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 16px);
-    @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 16px);
+    @include fonts-style-desktop ("Roboto", sans-serif, 400, 0px, 0px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 400, 0px, 0px);
     font-style: normal;  
 }
 
 .header__title {
     @include fonts-style-desktop ("Playfair Display", serif, 600, 86px, 103.2px);
-    @media (max-width: 350px) {
+    @media (max-width: 450px) {
         display: none;
     }
 }
@@ -27,7 +28,7 @@ html {
         cursor: pointer;
         text-decoration: underline #000;
     }
-    @media (max-width: 350px) {
+    @media (max-width: 450px) {
         display: none;
     }
 }
@@ -35,7 +36,7 @@ html {
 
 .nav__link-mobile {
     display: none;
-    @media (max-width: 350px) {
+    @media (max-width: 450px) {
         @include fonts-style-mobile ("Bitter", serif, 400, 40px, 48px); 
         display: inline-block;  
         color: #000;
@@ -53,6 +54,7 @@ html {
 .hero__txt_first {
     @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 103.2px);
     @include fonts-style-mobile ("Playfair Display", serif, 400, 70px, 93.31px);
+    @include fonts-style-mobile-fixed ("Playfair Display", serif, 400, 64px, 93.31px);
 }
 
 .hero__txt_second {
@@ -68,6 +70,7 @@ html {
 .biography__sect-title {
     @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 114.64px);
     @include fonts-style-mobile ("Playfair Display", serif, 400, 64px, 85.31px);
+    @include fonts-style-mobile-fixed ("Playfair Display", serif, 400, 54px, 85.31px);
 }
 
 .biography__art {
@@ -78,6 +81,7 @@ html {
 .biography__quote {
     @include fonts-style-desktop ("Bitter", serif, 400, 26px, 31.2px);
     @include fonts-style-mobile ("Bitter", serif, 300, 30px, 36px);
+    @include fonts-style-mobile-fixed ("Bitter", serif, 300, 28px, 36px);
 } 
 
 .designers__title {
@@ -104,11 +108,13 @@ html {
 .site-block__txt {
     @include fonts-style-desktop ("Roboto", sans-serif, 700, 16px, 18.75px);
     @include fonts-style-mobile ("Roboto", sans-serif, 700, 16px, 18.75px); //можно удалить
+    @include fonts-style-mobile-fixed ("Roboto", sans-serif, 700, 14px, 18.75px); 
 } 
 
 .site-block__link {
     @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 18.75px);
     @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 18.75px); //можно удалить
+    @include fonts-style-mobile-fixed ("Roboto", sans-serif, 400, 14px, 18.75px); 
     color: #000;
     text-decoration: none;
 } 
@@ -130,12 +136,12 @@ html {
  
 .strengths-sect__title {
     @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 86px);
-    @include fonts-style-mobile ("Playfair Display", serif, 400, 46px, 46px);
+    @include fonts-style-mobile ("Playfair Display", serif, 400, 46px, 40px);
 } 
  
 .strengths-sect__item {
-    @include fonts-style-desktop ("Bitter", serif, 400, 34px, 40.8px);
-    @include fonts-style-mobile ("Bitter", serif, 400, 24px, 28.8px);
+    @include fonts-style-desktop ("Bitter", serif, 400, 34px, 42.2px);
+    @include fonts-style-mobile ("Bitter", serif, 400, 24px, 37px);
 } 
  
 .footer__address {
@@ -157,7 +163,12 @@ html {
     @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
     @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
 } 
- 
+
+.footer__logo-span{
+    @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить
+}
+
 .footer__logo-span-second {
     @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
     @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить

@@ -7,7 +7,7 @@
 }
 
 @mixin fonts-style-tablet ($famili, $serif, $font-weight, $font-size, $line-height) {  
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
         font-family: $famili, $serif;
         font-weight: $font-weight;
         font-size: $font-size;
@@ -16,7 +16,7 @@
 }
 
 @mixin fonts-style-mobile ($famili, $serif, $font-weight, $font-size, $line-height) {  
-    @media (max-width: 350px) {
+    @media (max-width: 450px) {
         font-family: $famili, $serif;
         font-weight: $font-weight;
         font-size: $font-size;
@@ -24,6 +24,14 @@
     } 
 }
 
+@mixin fonts-style-mobile-fixed ($famili, $serif, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 385px) {
+        font-family: $famili, $serif;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
 
 
 
