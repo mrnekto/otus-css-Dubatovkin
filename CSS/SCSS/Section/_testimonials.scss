@@ -1,0 +1,120 @@
+.testimonials {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+}
+.site-block {
+    display: grid;
+    grid-template-columns: 1fr 57px;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 70px;
+    padding: 20px 0px;
+    align-items: center;
+    grid-column: 1 / 3;
+}
+.site-block__web {
+    height: 57px;
+    width: 190px;
+    grid-column: 2 / 3;
+    transform: rotateZ(-90deg) translate(2px, -58px);
+}
+.testimonials__img {
+    object-fit: cover;
+    min-height: 760px;
+    grid-column: 3 / 7;
+}
+.testimonials__title {
+    transform: rotateZ(-90deg) translateX(-100px);
+    height: 40px;
+    width: 40px;
+    grid-column: 7 / 8;
+}
+.testimonials__reviews-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 8 / 12;
+}
+.testimonials__reviews-txt {
+    box-sizing: content-box;
+    min-width: 216px;
+    max-width: 452px;
+    padding: 40px min(120px, calc(100% - 335px));
+    text-align: center;
+}
+.testimonials__reviews-img-mobile {
+    display: none;
+}
+.testimonials__reviews-img {
+    display: inline-block;
+    margin-top: -1px;
+    margin-left: 3px;
+    justify-self: center;
+}
+ /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
+например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
+
+
+@media (max-width: 450px) {
+
+.testimonials {
+    padding: 0 16px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.site-block {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 22px;
+    padding: 0px;
+    margin-left: 6px;
+    margin-top: 27px;
+}
+.site-block__web {
+    height: min-content;
+    min-width: calc(100vw - 254px);
+    width: min-content;
+    transform: none;
+}
+.testimonials__img {
+    display: none;
+}
+.testimonials__title {
+    order: 1;
+    align-self: flex-end;
+    transform: none;
+    height: min-content;
+    width: min-content;
+    margin-right: 4px;
+    margin-bottom: 28px;
+}
+.testimonials__reviews-block {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+.testimonials__reviews-txt {
+    box-sizing: content-box;
+    min-width: 0px;
+    max-width: 100%;
+    padding: 0px 38px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+.testimonials__reviews-img-mobile {
+    display: inline-block;
+}
+.testimonials__reviews-img {
+    display: none;
+}
+
+}
