@@ -87,6 +87,49 @@ legend {
   font-weight: 400;
   font-style: normal;
 }
+.designers__list::-webkit-scrollbar {
+  height: 10px;
+}
+.designers__list::-webkit-scrollbar-track {
+  background: #fff;
+}
+.designers__list::-webkit-scrollbar-thumb {
+  background-color: #c7c8ce;
+  border-radius: 20px;
+}
+
+.str-point__list-block::-webkit-scrollbar {
+  height: 10px;
+}
+.str-point__list-block::-webkit-scrollbar-track {
+  background: #fff;
+}
+.str-point__list-block::-webkit-scrollbar-thumb {
+  background-color: #c7c8ce;
+  border-radius: 20px;
+}
+
+.designers {
+  margin-bottom: -10px;
+}
+
+.str-point {
+  margin-bottom: -10px;
+}
+
+@media (max-width: 767px) {
+  html::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: #c7c8ce;
+    border-radius: 20px;
+  }
+}
 html {
   width: 100%;
   min-width: 350px;
@@ -132,23 +175,33 @@ main {
 
 .nav__item {
   display: inline-block;
-  margin-left: 55px;
+  margin-left: 3.8167938931vw;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .header {
-    min-width: 350px;
-    bottom: 0;
-    height: max(50px, 100vw - 367px);
+    height: 80px;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
   }
   .nav {
     width: 100%;
-    margin-right: 0;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .nav__list-block {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .nav__item {
+    margin-left: 0;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    min-width: 350px;
+    bottom: 0;
+    height: max(50px, 100vw - 367px);
   }
   .nav__list-block {
     width: calc(100% - 32px);
@@ -161,15 +214,12 @@ main {
          column-gap: 15px;
     justify-items: center;
   }
-  .nav__item {
-    margin-left: 0;
-  }
 }
 .hero {
   background-color: #d6d4d0; /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
   background-image: url(../image/Hero-section.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
   width: 100%;
   height: 630px;
@@ -199,24 +249,30 @@ main {
 }
 
 /* Использовал чисто отступы, display и position для верстки (в некоторых местах использовал calc для создания пропорционального расширения и сжатия). */
+@media (max-width: 767px) {
+  .hero {
+    margin-top: 300px;
+    height: 360px;
+  }
+  .hero__txt-block {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    padding-top: 0px;
+    top: -184px;
+    transform: translate(-50%, 0%);
+  }
+}
 @media (max-width: 450px) {
   .hero {
-    background-color: #d6d4d0; /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
     background-image: url(../image/mobile/Hero-section-mobile.jpg);
     background-position: bottom 0px left 0px;
     height: 764px;
     margin-top: 0px;
   }
   .hero__txt-block {
-    box-sizing: border-box;
-    background-color: #ffffff;
-    margin: auto;
-    width: 100%;
     height: 344px;
-    position: absolute;
     top: 0px;
-    left: 50%;
-    transform: translate(-50%, 0%);
     padding-top: 110px;
   }
   .hero__txt_first {
@@ -286,26 +342,62 @@ main {
 }
 
 /* Использовал чисто Flex для создания секции. */
+@media (max-width: 767px) {
+  .biography {
+    padding-top: 100px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .biography__img {
+    margin: 32px 0;
+    order: 2;
+    width: 100%;
+    min-height: 0;
+    height: 600px;
+  }
+  .biography__title {
+    order: 1;
+    transform: none;
+    margin-left: 16px;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .biography__sect {
+    order: 3;
+    width: 100%;
+    gap: 25px;
+    padding: 0 30px;
+    text-align: center;
+  }
+  .biography__sect-title {
+    max-width: 100%;
+  }
+  .biography__quote-sect {
+    max-width: 100%;
+  }
+  .biography__rectangle {
+    display: none;
+  }
+}
 @media (max-width: 450px) {
   .biography {
     position: relative;
-    width: 100%;
     padding-top: 81px;
-    flex-direction: column;
   }
   .biography__img {
     display: none;
   }
   .biography__title {
-    transform: none;
     position: absolute;
     top: 80px;
     right: 26.1px;
   }
   .biography__sect {
-    width: 100%;
+    order: 0;
+    padding: 0;
     padding-left: 18px;
     gap: 0px;
+    text-align: left;
   }
   .biography__sect-title {
     order: 3;
@@ -324,15 +416,12 @@ main {
   .biography__quote-sect {
     order: 2;
     height: 226px;
-    max-width: 100%;
+    width: 100%;
     margin-right: 18px;
     margin-bottom: 41px;
   }
   .biography__break {
     display: inline;
-  }
-  .biography__rectangle {
-    display: none;
   }
   .biography__img-mobile {
     display: inline-block;
@@ -349,7 +438,7 @@ main {
 }
 
 .designers__title {
-  margin-left: max(139px, 40% - 437px);
+  margin-left: max(60px, 40% - 437px);
   padding-bottom: 30px;
 }
 
@@ -444,9 +533,9 @@ main {
 /* Секция сверстана с использованием Grid (для позиционирования блоков designers-NAME использовал flex).
 Вынес заголовок за designers-list для того, чтобы при скролле заголовок оставался на месте и 
 не скролился вместе с карточками.  */
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .designers {
-    padding-top: 80px;
+    padding-top: 100px;
   }
   .designers__title {
     margin-left: 16px;
@@ -510,6 +599,11 @@ main {
     grid-column: 10/13;
   }
 }
+@media (max-width: 450px) {
+  .designers {
+    padding-top: 80px;
+  }
+}
 .testimonials {
   width: 100%;
   max-width: 1680px;
@@ -543,7 +637,7 @@ main {
 .testimonials__img {
   -o-object-fit: cover;
      object-fit: cover;
-  min-height: 760px;
+  min-height: 750px;
   grid-column: 3/7;
 }
 
@@ -582,17 +676,83 @@ main {
 
 /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
 например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .testimonials {
-    padding: 0 16px;
-    padding-top: 80px;
+    padding: 0;
+    padding-top: 100px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .site-block {
     order: 3;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .site-block__web {
+    text-align: center;
+    height: -moz-min-content;
+    height: min-content;
+    width: -moz-min-content;
+    width: min-content;
+    transform: none;
+  }
+  .testimonials__img {
+    order: 2;
+    min-height: 0;
+    height: 350px;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+  .testimonials__title {
+    width: 80%;
+    order: 1;
+    align-self: flex-start;
+    transform: none;
+    height: -moz-min-content;
+    height: min-content;
+    margin-left: 16px;
+    margin-bottom: 32px;
+  }
+  .testimonials__reviews-block {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials__reviews-txt {
+    min-width: 0px;
+    max-width: 400px;
+    padding: 32px 0px;
+    margin: auto;
+  }
+  .testimonials__reviews-img-mobile {
+    display: inline-block;
+    height: 612px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+  .testimonials__reviews-img {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .testimonials {
+    padding: 0 16px;
+    padding-top: 80px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .site-block {
+    order: 3;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     row-gap: 22px;
     padding: 0px;
@@ -600,22 +760,14 @@ main {
     margin-top: 27px;
   }
   .site-block__web {
-    height: -moz-min-content;
-    height: min-content;
+    text-align: left;
     min-width: calc(100vw - 254px);
-    width: -moz-min-content;
-    width: min-content;
-    transform: none;
   }
   .testimonials__img {
     display: none;
   }
   .testimonials__title {
-    order: 1;
     align-self: flex-end;
-    transform: none;
-    height: -moz-min-content;
-    height: min-content;
     width: -moz-min-content;
     width: min-content;
     margin-right: 4px;
@@ -623,22 +775,15 @@ main {
   }
   .testimonials__reviews-block {
     order: 2;
-    display: flex;
-    flex-direction: column;
   }
   .testimonials__reviews-txt {
-    box-sizing: content-box;
-    min-width: 0px;
     max-width: 100%;
     padding: 0px 38px;
-    text-align: center;
     margin-bottom: 21px;
   }
   .testimonials__reviews-img-mobile {
-    display: inline-block;
-  }
-  .testimonials__reviews-img {
-    display: none;
+    height: -moz-min-content;
+    height: min-content;
   }
 }
 .str-point {
@@ -646,7 +791,7 @@ main {
 }
 
 .str-point__title {
-  margin-left: max(258px, 40% - 318px);
+  margin-left: max(60px, 40% - 318px);
   padding-bottom: 30px;
 }
 
@@ -710,9 +855,9 @@ main {
 }
 
 /* Написан на Grid и выполнен Fallback для Flex.  */
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .str-point {
-    padding-top: 78px;
+    padding-top: 100px;
   }
   .str-point__title {
     margin-left: 16px;
@@ -758,6 +903,11 @@ main {
     grid-column: 6/span 3;
   }
 }
+@media (max-width: 450px) {
+  .str-point {
+    padding-top: 78px;
+  }
+}
 .footer {
   width: 100%;
   height: 168px;
@@ -769,18 +919,43 @@ main {
   margin-top: 151px;
 }
 
+.footer__logo {
+  text-align: center;
+}
+
 .footer__address {
-  width: max(273px, 20%);
+  width: max(260px, 20%);
   margin-left: max(20px, 40% - 556px);
 }
 
 .footer__rights {
   text-align: right;
-  width: max(273px, 20%);
+  width: max(260px, 20%);
   margin-right: max(24px, 40% - 552px);
 }
 
 /* Для верстки использовал Flex, так как это самый простой способ  */
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 141px;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .footer__logo {
+    text-align: right;
+    margin-right: 20px;
+    width: 40%;
+  }
+  .footer__address {
+    width: 40%;
+    margin-left: 20px;
+  }
+  .footer__rights {
+    text-align: center;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
 @media (max-width: 450px) {
   .footer {
     height: 193px;
@@ -788,59 +963,28 @@ main {
     padding-bottom: 45px;
     flex-direction: column;
     align-items: flex-start;
+    align-content: stretch;
     margin-top: 241px;
     margin-bottom: max(50px, 100vw - 367px);
   }
   .footer__logo {
+    width: -moz-max-content;
+    width: max-content;
     order: 1;
     align-self: end;
     margin-right: 16px;
   }
   .footer__address {
+    width: -moz-max-content;
+    width: max-content;
     order: 2;
     margin-left: 16px;
   }
   .footer__rights {
     order: 3;
-    margin-right: 0px;
     margin-left: 16px;
-  }
-}
-.designers__list::-webkit-scrollbar {
-  width: 100vw;
-  height: 10px;
-}
-.designers__list::-webkit-scrollbar-track {
-  background: #fff;
-}
-.designers__list::-webkit-scrollbar-thumb {
-  background-color: #c7c8ce;
-  border-radius: 20px;
-}
-
-.str-point__list-block::-webkit-scrollbar {
-  width: 100vw;
-  height: 10px;
-}
-.str-point__list-block::-webkit-scrollbar-track {
-  background: #fff;
-}
-.str-point__list-block::-webkit-scrollbar-thumb {
-  background-color: #c7c8ce;
-  border-radius: 20px;
-}
-
-.designers {
-  margin-bottom: -10px;
-}
-
-.str-point {
-  margin-bottom: -10px;
-}
-
-@media (max-width: 450px) {
-  html::-webkit-scrollbar {
-    width: 0px;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 html {
@@ -865,18 +1009,13 @@ html {
   font-size: 86px;
   line-height: 103.2px;
 }
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .header__title {
     display: none;
   }
 }
 
 .nav__link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28.13px;
-  display: inline-block;
   color: #000;
   text-decoration: none;
 }
@@ -886,37 +1025,53 @@ html {
   -webkit-text-decoration: underline #000;
           text-decoration: underline #000;
 }
+.nav__link_mobile:hover {
+  font-weight: 700;
+}
+
+.nav__link_desktop {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.13px;
+  display: inline-block;
+}
+@media (max-width: 901px) {
+  .nav__link_desktop {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28.13px;
+  }
+}
+@media (max-width: 767px) {
+  .nav__link_desktop {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
 @media (max-width: 450px) {
-  .nav__link {
+  .nav__link_desktop {
     display: none;
   }
 }
 
-.nav__link-mobile {
+.nav__link_mobile {
   display: none;
 }
 @media (max-width: 450px) {
-  .nav__link-mobile {
+  .nav__link_mobile {
     display: inline-block;
-    color: #000;
-    text-decoration: none;
   }
 }
 @media (max-width: 450px) and (max-width: 450px) {
-  .nav__link-mobile {
+  .nav__link_mobile {
     font-family: "Bitter", serif;
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
-  }
-}
-@media (max-width: 450px) {
-  .nav__link-mobile:hover {
-    color: #000;
-    cursor: pointer;
-    -webkit-text-decoration: underline #000;
-            text-decoration: underline #000;
-    font-weight: 700;
   }
 }
 
@@ -925,6 +1080,14 @@ html {
   font-weight: 500;
   font-size: 86px;
   line-height: 103.2px;
+}
+@media (max-width: 767px) {
+  .hero__txt_first {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 86px;
+  }
 }
 @media (max-width: 450px) {
   .hero__txt_first {
@@ -979,6 +1142,14 @@ html {
   font-size: 86px;
   line-height: 114.64px;
 }
+@media (max-width: 901px) {
+  .biography__sect-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 86px;
+  }
+}
 @media (max-width: 450px) {
   .biography__sect-title {
     font-family: "Playfair Display", serif;
@@ -1002,6 +1173,14 @@ html {
   font-size: 18px;
   line-height: 21.09px;
 }
+@media (max-width: 767px) {
+  .biography__art {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21.09px;
+  }
+}
 @media (max-width: 450px) {
   .biography__art {
     font-family: "Roboto", sans-serif;
@@ -1017,7 +1196,15 @@ html {
   font-size: 26px;
   line-height: 31.2px;
 }
-@media (max-width: 450px) {
+@media (max-width: 901px) {
+  .biography__quote {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
   .biography__quote {
     font-family: "Bitter", serif;
     font-weight: 300;
@@ -1194,7 +1381,7 @@ html {
   font-size: 86px;
   line-height: 86px;
 }
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .strengths-sect__title {
     font-family: "Playfair Display", serif;
     font-weight: 400;
@@ -1209,7 +1396,7 @@ html {
   font-size: 34px;
   line-height: 42.2px;
 }
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .strengths-sect__item {
     font-family: "Bitter", serif;
     font-weight: 400;
@@ -1243,21 +1430,6 @@ html {
   text-decoration: none;
 }
 
-.footer__logo-span-first {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21.09px;
-}
-@media (max-width: 450px) {
-  .footer__logo-span-first {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21.09px;
-  }
-}
-
 .footer__logo-span {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -1273,18 +1445,18 @@ html {
   }
 }
 
-.footer__logo-span-second {
+.footer__logo-span_first {
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 28.13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
 }
 @media (max-width: 450px) {
-  .footer__logo-span-second {
+  .footer__logo-span_first {
     font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 28.13px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
   }
 }
 

@@ -8,40 +8,68 @@
     justify-content: space-between;
     margin-top: 151px;
 }
+.footer__logo {
+    text-align: center;
+}
 .footer__address {
-    width: max(273px, 20%);
+    width: max(260px, 20%);
     margin-left: max(20px, calc(40% - 556px));
 }  
 .footer__rights {
     text-align: right;
-    width: max(273px, 20%);
+    width: max(260px, 20%);
     margin-right: max(24px, calc(40% - 552px));
 }
+
 /* Для верстки использовал Flex, так как это самый простой способ  */
 
-@media (max-width: 450px) {
-.footer {
-    height: 193px; 
-    padding-top: 42px;
-    padding-bottom: 45px;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 241px;
-    margin-bottom: max(50px, calc(100vw - 367px));;
-}
-.footer__logo {
-    order: 1;
-    align-self: end;
-    margin-right: 16px;
-}
-.footer__address {
-    order: 2;
-    margin-left: 16px;
-}  
-.footer__rights {
-    order: 3;
-    margin-right: 0px;
-    margin-left: 16px;
+@media (max-width: 767px) {
+    .footer {
+        margin-top: 141px;
+        align-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .footer__logo {
+        text-align: right;
+        margin-right: 20px;
+        width: 40%;
+    }
+    .footer__address {
+        width: 40%;
+        margin-left: 20px;
+    }  
+    .footer__rights {
+        text-align: center;
+        width: 100%;
+        margin-right: 0px;
+    }
 }
 
+@media (max-width: 450px) {
+    .footer {
+        height: 193px; 
+        padding-top: 42px;
+        padding-bottom: 45px;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: stretch;
+        margin-top: 241px;
+        margin-bottom: max(50px, calc(100vw - 367px));
+    }
+    .footer__logo {
+        width: max-content;
+        order: 1;
+        align-self: end;
+        margin-right: 16px;
+    }
+    .footer__address {
+        width: max-content;
+        order: 2;
+        margin-left: 16px;
+    }  
+    .footer__rights {
+        order: 3;
+        margin-left: 16px;
+        width: max-content;
+    }
 }

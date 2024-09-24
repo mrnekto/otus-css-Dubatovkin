@@ -26,7 +26,7 @@
 }
 .testimonials__img {
     object-fit: cover;
-    min-height: 760px;
+    min-height: 750px;
     grid-column: 3 / 7;
 }
 .testimonials__title {
@@ -60,61 +60,108 @@
  /* Использовал чисто Grid для создания секции (в некоторых местах использовал calc для создания пропорционального расширения и сжатия, 
 например в testimonials-reviews-txt использовал для вычисления padding в зависимости от ширины).  */
 
+@media (max-width: 767px) {
+    .testimonials {
+        padding: 0;              
+        padding-top: 100px;
+        display: flex;              //--------------
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .site-block {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0px 20px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .site-block__web {
+        text-align: center;
+        height: min-content;
+        width: min-content;
+        transform: none;
+    }
+    .testimonials__img {
+        order: 2;
+        min-height: 0;
+        height: 350px;
+        object-position: 50% 60%;
+        flex-grow: 1;
+        margin-left: 16px;
+    }
+    .testimonials__title {
+        width: 80%;
+        order: 1;
+        align-self: flex-start;
+        transform: none;
+        height: min-content;
+        margin-left: 16px;
+        margin-bottom: 32px;
+    }
+    .testimonials__reviews-block {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+    }
+    .testimonials__reviews-txt {
+        min-width: 0px;
+        max-width: 400px;
+        padding: 32px 0px;
+        margin: auto;
+    }
+    .testimonials__reviews-img-mobile {
+        display: inline-block;
+        height: 612px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .testimonials__reviews-img {
+        display: none;
+    }
+}
 
 @media (max-width: 450px) {
-
-.testimonials {
-    padding: 0 16px;
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-}
-.site-block {
-    order: 3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 22px;
-    padding: 0px;
-    margin-left: 6px;
-    margin-top: 27px;
-}
-.site-block__web {
-    height: min-content;
-    min-width: calc(100vw - 254px);
-    width: min-content;
-    transform: none;
-}
-.testimonials__img {
-    display: none;
-}
-.testimonials__title {
-    order: 1;
-    align-self: flex-end;
-    transform: none;
-    height: min-content;
-    width: min-content;
-    margin-right: 4px;
-    margin-bottom: 28px;
-}
-.testimonials__reviews-block {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-}
-.testimonials__reviews-txt {
-    box-sizing: content-box;
-    min-width: 0px;
-    max-width: 100%;
-    padding: 0px 38px;
-    text-align: center;
-    margin-bottom: 21px;
-}
-.testimonials__reviews-img-mobile {
-    display: inline-block;
-}
-.testimonials__reviews-img {
-    display: none;
-}
+    .testimonials {
+        padding: 0 16px;              
+        padding-top: 80px;
+        flex-wrap: nowrap;
+        flex-direction: column;              
+    }
+    .site-block {
+        order: 3;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        row-gap: 22px;
+        padding: 0px;
+        margin-left: 6px;
+        margin-top: 27px;
+    }
+    .site-block__web {
+        text-align: left;
+        min-width: calc(100vw - 254px);
+    }
+    .testimonials__img {
+        display: none;
+    }
+    .testimonials__title {
+        align-self: flex-end;
+        width: min-content;
+        margin-right: 4px;
+        margin-bottom: 28px;
+    }
+    .testimonials__reviews-block {
+        order: 2;
+    }
+    .testimonials__reviews-txt {
+        max-width: 100%;
+        padding: 0px 38px;
+        margin-bottom: 21px;
+    }
+    .testimonials__reviews-img-mobile {
+        height: min-content;
+    }
 
 }
