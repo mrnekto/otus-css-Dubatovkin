@@ -5,26 +5,136 @@
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
-    padding-top: 151px;}
+    padding-top: 151px;
+}
+
 .biography__img {
     width: 49%;
     min-height: 600px;
-    object-fit: cover;}
+    object-fit: cover;
+}
+
 .biography__title {
     height: 47px;
     transform: rotate(-90deg) translateX(-30%);
-    margin-right: auto;}
+    margin-right: auto;
+}
+
 .biography__sect {
     width: 39%;
     align-self: center;
     display: flex;
     flex-direction: column;
-    gap: 36px;}
+    gap: 36px;
+}
+
+.biography__sect-title {
+    max-width: 420px;
+}
+
+.biography__art-span {
+    &::before{
+        content: '';
+    }  
+}
+
+.biography__art-span_slash {
+    &::after{
+        content: ' /';
+    }
+}
+
 .biography__quote-sect {
-    max-width: 370px;}
+    max-width: 370px;
+}
+.biography__break{
+    display: none;
+}
 .biography__rectangle {
     width: 20px;
     height: 6px;
     background-color: black;
-    margin-bottom: 18px;}
+    margin-bottom: 18px;
+}
+
+.biography__img-mobile {
+    display: none;
+}
+
 /* Использовал чисто Flex для создания секции. */
+
+
+
+
+@media (max-width: 450px) {
+
+    .biography {
+        position: relative;
+        width: 100%;
+        padding-top: 81px;
+        flex-direction: column;
+    }
+    
+    .biography__img {
+        display: none;
+    }
+    
+    .biography__title {
+        transform: none;
+        position: absolute;
+        top: 80px; 
+        right: 26.1px;
+    }
+    
+    .biography__sect {
+        width: 100%;
+        padding-left: 18px;
+        gap: 0px;
+    }
+
+    .biography__sect-title{
+        order: 3;
+        &::before{
+            content: '-';
+        }
+        margin-bottom: 35px;
+    }
+
+    .biography__art{
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        margin-bottom: 57px;
+    }
+
+    .biography__quote-sect {
+        order: 2;
+        height: 226px;
+        max-width: 100%;
+        margin-right: 18px;
+        margin-bottom: 41px;
+    }
+    .biography__break{
+        display: inline;
+    }
+    .biography__rectangle {
+        display: none;
+    }
+
+    .biography__img-mobile {
+        display: inline-block;
+    }
+
+    .biography__art-span {
+        &::before{
+            content: '- ';
+        }  
+    }
+    
+    .biography__art-span_slash {
+        &::after{
+            content: '';
+        }
+    }
+}
