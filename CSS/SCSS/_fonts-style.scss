@@ -26,7 +26,7 @@ html {
     &:hover {
         color: #000;
         cursor: pointer;
-        text-decoration: underline #000;
+        text-decoration: underline #000 
     }
     &_mobile:hover {
         font-weight: 700;
@@ -62,27 +62,23 @@ html {
     @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
     @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
 }
-
 .biography__sect-title {
     @include fonts-style-desktop ("Playfair Display", serif, 500, 86px, 114.64px);
     @include fonts-style-desktop-fixed ("Playfair Display", serif, 500, 70px, 86px);
     @include fonts-style-mobile ("Playfair Display", serif, 400, 64px, 85.31px);
     @include fonts-style-mobile-fixed ("Playfair Display", serif, 400, 54px, 85.31px);
 }
-
 .biography__art {
     @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
     @include fonts-style-tablet ("Roboto", sans-serif, 500, 16px, 21.09px);
     @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
 } 
-
 .biography__quote {
     @include fonts-style-desktop ("Bitter", serif, 400, 26px, 31.2px);
     @include fonts-style-desktop-fixed ("Bitter", serif, 400, 22px, 28px);
     @include fonts-style-tablet ("Bitter", serif, 300, 30px, 36px);
     @include fonts-style-mobile-fixed ("Bitter", serif, 300, 28px, 36px);
 } 
-
 .designers__title {
     @include fonts-style-desktop ("Roboto", sans-serif, 700, 24px, 28.13px);
     @include fonts-style-mobile ("Roboto", sans-serif, 700, 18px, 21.09px);
@@ -136,7 +132,6 @@ html {
     @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 26px);
     @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 26px); //можно удалить
     text-transform: uppercase;
-    
     &-link {
         color: #ffffff;
         text-decoration: underline #ffffff;
@@ -146,6 +141,7 @@ html {
         text-decoration: none;
     }
 }
+
 .footer__logo-span {
     @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
     @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить
