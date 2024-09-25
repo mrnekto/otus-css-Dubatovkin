@@ -19,34 +19,34 @@ html {
 }
 
 .nav__link {
-    @include fonts-style-desktop ("Roboto", sans-serif, 500, 24px, 28.13px);
-    display: inline-block;
     color: #000;
     text-decoration: none;
     &:hover {
         color: #000;
         cursor: pointer;
-        text-decoration: underline #000;
+        text-decoration: underline #000 
     }
+    &_mobile:hover {
+        font-weight: 700;
+    }
+}
+
+.nav__link_desktop {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 24px, 28.13px);
+    @include fonts-style-desktop-fixed ("Roboto", sans-serif, 500, 20px, 28.13px);
+    @include fonts-style-tablet ("Roboto", sans-serif, 500, 16px, 18.75px);
+    display: inline-block;
     @media (max-width: 450px) {
         display: none;
     }
 }
 
 
-.nav__link-mobile {
+.nav__link_mobile {
     display: none;
     @media (max-width: 450px) {
         @include fonts-style-mobile ("Bitter", serif, 400, 40px, 48px); 
         display: inline-block;  
-        color: #000;
-        text-decoration: none;
-        &:hover {
-            color: #000;
-            cursor: pointer;
-            text-decoration: underline #000;
-            font-weight: 700;
-            }
     }
 }
 
@@ -159,20 +159,15 @@ html {
     }
 }
 
-.footer__logo-span-first {
-    @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
-    @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
-} 
-
-.footer__logo-span{
+.footer__logo-span {
     @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
     @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить
 }
 
-.footer__logo-span-second {
-    @include fonts-style-desktop ("Roboto", sans-serif, 900, 24px, 28.13px);
-    @include fonts-style-mobile ("Roboto", sans-serif, 900, 24px, 28.13px); //можно удалить
-} 
+.footer__logo-span_first {
+    @include fonts-style-desktop ("Roboto", sans-serif, 500, 18px, 21.09px);
+    @include fonts-style-mobile ("Roboto", sans-serif, 500, 18px, 21.09px); //можно удалить
+}
  
 .footer__rights {
     @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 18.75px);
