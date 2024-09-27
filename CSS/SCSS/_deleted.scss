@@ -3,8 +3,7 @@
 // Здесь собрал все касаемо скроллбоксов для страницы, при удалении не поломает страницу
 
 .designers__list {  
-    &::-webkit-scrollbar {
-        width: 100vw; 
+    &::-webkit-scrollbar { 
         height: 10px;
     }
     &::-webkit-scrollbar-track {
@@ -15,10 +14,8 @@
         border-radius: 20px; 
     }
 }  
-
 .str-point__list-block {
-    &::-webkit-scrollbar {
-        width: 100vw; 
+    &::-webkit-scrollbar { 
         height: 10px;
     }
     &::-webkit-scrollbar-track {
@@ -29,19 +26,25 @@
         border-radius: 20px; 
     }
 } 
-
 .designers {
     margin-bottom: -10px;
 }
-
 .str-point {
     margin-bottom: -10px;
 }
-
-@media (max-width: 450px) {
+@media (max-width: 767px) {
     html {
         &::-webkit-scrollbar {
             width: 0px; 
+            height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #fff; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #c7c8ce; 
+            border-radius: 20px; 
         }
     } 
+
 } 

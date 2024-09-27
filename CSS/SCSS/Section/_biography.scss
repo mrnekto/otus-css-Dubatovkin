@@ -7,19 +7,16 @@
     margin: 0 auto;
     padding-top: 151px;
 }
-
 .biography__img {
     width: 49%;
     min-height: 600px;
     object-fit: cover;
 }
-
 .biography__title {
     height: 47px;
     transform: rotate(-90deg) translateX(-30%);
     margin-right: auto;
 }
-
 .biography__sect {
     width: 39%;
     align-self: center;
@@ -27,23 +24,19 @@
     flex-direction: column;
     gap: 36px;
 }
-
 .biography__sect-title {
     max-width: 420px;
 }
-
 .biography__art-span {
     &::before{
         content: '';
     }  
 }
-
 .biography__art-span_slash {
     &::after{
         content: ' /';
     }
 }
-
 .biography__quote-sect {
     max-width: 370px;
 }
@@ -56,42 +49,71 @@
     background-color: black;
     margin-bottom: 18px;
 }
-
 .biography__img-mobile {
     display: none;
 }
 
 /* Использовал чисто Flex для создания секции. */
 
-
-
-
-@media (max-width: 450px) {
-
+@media (max-width: 767px) {
     .biography {
-        position: relative;
+        padding-top: 100px;
         width: 100%;
-        padding-top: 81px;
         flex-direction: column;
     }
-    
+    .biography__img {
+        margin: 32px 0;
+        order: 2;
+        width: 100%;
+        min-height: 0;
+        height: 600px;
+    }
+    .biography__title {
+        order: 1;
+        transform: none;
+        margin-left: 16px;
+        height: min-content;
+
+    }
+    .biography__sect {
+        order: 3;
+        width: 100%;
+        gap: 25px;
+        padding: 0 30px;
+        text-align: center;
+    }
+    .biography__sect-title {
+        max-width: 100%;
+    }
+    .biography__quote-sect {
+        max-width: 100%;
+    }
+    .biography__rectangle {
+        display: none;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .biography {
+        position: relative;
+        padding-top: 81px;
+    }
     .biography__img {
         display: none;
     }
-    
     .biography__title {
-        transform: none;
         position: absolute;
         top: 80px; 
         right: 26.1px;
     }
-    
     .biography__sect {
-        width: 100%;
+        order: 0;
+        padding: 0;
         padding-left: 18px;
         gap: 0px;
+        text-align: left;
     }
-
     .biography__sect-title{
         order: 3;
         &::before{
@@ -99,7 +121,6 @@
         }
         margin-bottom: 35px;
     }
-
     .biography__art{
         order: 1;
         display: flex;
@@ -107,31 +128,24 @@
         align-self: start;
         margin-bottom: 57px;
     }
-
     .biography__quote-sect {
         order: 2;
         height: 226px;
-        max-width: 100%;
+        width: 100%;
         margin-right: 18px;
         margin-bottom: 41px;
     }
     .biography__break{
         display: inline;
     }
-    .biography__rectangle {
-        display: none;
-    }
-
     .biography__img-mobile {
         display: inline-block;
     }
-
     .biography__art-span {
         &::before{
             content: '- ';
         }  
     }
-    
     .biography__art-span_slash {
         &::after{
             content: '';

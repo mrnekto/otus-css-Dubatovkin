@@ -5,16 +5,22 @@
     line-height: $line-height;
  
 }
-
-@mixin fonts-style-tablet ($famili, $serif, $font-weight, $font-size, $line-height) {  
-    @media (max-width: 768px) {
+@mixin fonts-style-desktop-fixed ($famili, $serif, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 901px) {
         font-family: $famili, $serif;
         font-weight: $font-weight;
         font-size: $font-size;
         line-height: $line-height; 
     } 
 }
-
+@mixin fonts-style-tablet ($famili, $serif, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 767px) {
+        font-family: $famili, $serif;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
 @mixin fonts-style-mobile ($famili, $serif, $font-weight, $font-size, $line-height) {  
     @media (max-width: 450px) {
         font-family: $famili, $serif;
@@ -23,7 +29,6 @@
         line-height: $line-height; 
     } 
 }
-
 @mixin fonts-style-mobile-fixed ($famili, $serif, $font-weight, $font-size, $line-height) {  
     @media (max-width: 385px) {
         font-family: $famili, $serif;
@@ -32,46 +37,3 @@
         line-height: $line-height; 
     } 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @mixin flex-parent ($f-direction, $f-wrap, $f-ai, $f-jc, $f-ac) {
-//     display: flex;
-//     flex-direction: $f-direction;
-//     flex-wrap: $f-wrap;
-//     align-items: $f-ai;
-//     justify-content: $f-jc;
-//     align-content: $f-ac;
-// }
-
-// @mixin flex-child ($f-as, $f-order, $f-grow, $f-shrink, $f-basis) {
-//     align-self: $f-as;
-//     order: $f-order;
-//     flex-grow: $f-grow;
-//     flex-shrink: $f-shrink;
-//     flex-basis: $f-basis;
-// }
-
-// @mixin grid-parent ($g-columns, $g-rows, $g-auto-columns, $g-auto-flow, ) {
-//     display: grid;
-//     grid-template-columns: $g-columns;
-//     grid-template-rows: $g-rows;
-//     grid-auto-columns: $g-auto-columns;
-//     grid-auto-flow: $g-auto-flow;
-// }
-
-// @mixin grid-child () {
-    
-// }
-
