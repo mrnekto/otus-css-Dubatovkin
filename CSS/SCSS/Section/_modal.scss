@@ -1,8 +1,5 @@
 .modal {
-    position: fixed;
-    top: 78px;
-    left: 50%;
-    transform: translate(-46%, 0%);
+    margin: 78px auto;
     width: 480px;
     height: 588.45px;
     border-radius: 10px;
@@ -31,8 +28,28 @@
     right: 50.56px;
     color: white;
     background-color: black;
+    text-align: center;
 }
 .modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
+    margin: 78px auto;
+    width: 480px;
+    height: 588.45px;
+    background-color: transparent;
+    opacity: 1;
+    border: 2px solid white;
+    border-radius: 10px;
+    transform: rotate(2deg);
 }
-
+.popap-bcg {
+    z-index: 120;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    &--open-modal {
+        display: block;
+    }
+}

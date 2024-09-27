@@ -122,7 +122,7 @@ legend {
   background: #fff;
 }
 .designers__list::-webkit-scrollbar-thumb {
-  background-color: #c7c8ce;
+  background-color: #666666;
   border-radius: 20px;
 }
 
@@ -133,7 +133,7 @@ legend {
   background: #fff;
 }
 .str-point__list-block::-webkit-scrollbar-thumb {
-  background-color: #c7c8ce;
+  background-color: #666666;
   border-radius: 20px;
 }
 
@@ -145,17 +145,20 @@ legend {
   margin-bottom: -10px;
 }
 
+html::-webkit-scrollbar {
+  width: 15px;
+}
+html::-webkit-scrollbar-track {
+  background: #cacaca;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #666666;
+}
+
 @media (max-width: 767px) {
   html::-webkit-scrollbar {
     width: 0px;
-    height: 10px;
-  }
-  html::-webkit-scrollbar-track {
-    background: #fff;
-  }
-  html::-webkit-scrollbar-thumb {
-    background-color: #c7c8ce;
-    border-radius: 20px;
+    height: 0px;
   }
 }
 html {
@@ -165,18 +168,21 @@ html {
   scrollbar-gutter: stable;
 }
 
-body {
+.body {
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
   min-height: 100vh;
-  scrollbar-gutter: stable;
+}
+.body--scroll-locked {
+  overflow: hidden;
 }
 
 @media (max-width: 450px) {
-  body {
-    position: relative;
-    margin-top: -273px;
+  .body {
+    margin-top: -355px;
   }
 }
 main {
@@ -186,13 +192,23 @@ main {
 .header {
   background-color: #ffffff;
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   height: 135px;
   z-index: 110;
+  scrollbar-gutter: stable;
+}
+
+.header__block {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 135px;
+  max-width: 1680px;
 }
 
 .header__title {
-  margin-left: max(23px, 40% - 553px);
+  margin-left: 23px;
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -201,18 +217,18 @@ main {
 }
 
 .nav {
-  margin-right: max(20px, 40% - 556px);
+  margin-right: 20px;
   display: flex;
   align-items: center;
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: 0;
   transform: translate(0%, -50%);
 }
 
 .nav__item {
   display: inline-block;
-  margin-right: 3.8167938931vw;
+  margin-right: max(20px, 10vw - 89px);
 }
 
 .header__button {
@@ -228,11 +244,13 @@ main {
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
   }
+  .header__block {
+    height: 80px;
+  }
   .nav {
     display: inline-block;
     width: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0%;
   }
   .nav__list-block {
     display: flex;
@@ -248,12 +266,13 @@ main {
 }
 @media (max-width: 450px) {
   .header {
-    position: sticky;
-    top: 100vh;
+    top: calc(100vh - 82px);
     min-width: 350px;
     height: 82px;
-    transform: translate(0, -100%);
-    margin-bottom: 191px;
+    margin-bottom: 273px;
+  }
+  .header__block {
+    height: 82px;
   }
   .nav__list-block {
     width: calc(100% - 32px);
@@ -275,7 +294,6 @@ main {
   background-size: cover;
   width: 100%;
   height: 630px;
-  margin-top: 135px;
   position: relative;
 }
 
@@ -303,7 +321,7 @@ main {
 /* Использовал чисто отступы, display и position для верстки (в некоторых местах использовал calc для создания пропорционального расширения и сжатия). */
 @media (max-width: 767px) {
   .hero {
-    margin-top: 300px;
+    margin-top: 220px;
     height: 360px;
   }
   .hero__txt-block {
@@ -1039,10 +1057,7 @@ main {
   }
 }
 .modal {
-  position: fixed;
-  top: 78px;
-  left: 50%;
-  transform: translate(-46%, 0%);
+  margin: 78px auto;
   width: 480px;
   height: 588.45px;
   border-radius: 10px;
@@ -1076,10 +1091,32 @@ main {
   right: 50.56px;
   color: white;
   background-color: black;
+  text-align: center;
 }
 
 .modal::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  margin: 78px auto;
+  width: 480px;
+  height: 588.45px;
+  background-color: transparent;
+  opacity: 1;
+  border: 2px solid white;
+  border-radius: 10px;
+  transform: rotate(2deg);
+}
+
+.popap-bcg {
+  z-index: 120;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.popap-bcg--open-modal {
+  display: block;
 }
 
 html {

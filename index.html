@@ -15,35 +15,37 @@
 
 
 
-<body >
+<body class="body">
 
 
 
-    <header class="header">  
-        <h1 class="header__title">Mod</h1>
-        <nav class="header__nav nav">
-            <ul class="nav__list-block" >
-                <li class="nav__item"> 
-                    <a href="#Biography" class="nav__link nav__link_desktop">Biography</a> 
-                    <a href="#Biography" class="nav__link nav__link_mobile">B</a>
-                </li>            
-                <li class="nav__item"> 
-                    <a href="#Designers" class="nav__link nav__link_desktop">Designers</a>
-                    <a href="#Designers" class="nav__link nav__link_mobile">D</a> 
-                </li>
-                <li class="nav__item"> 
-                    <a href="#Testimonials" class="nav__link nav__link_desktop">Testimonials</a>
-                    <a href="#Testimonials" class="nav__link nav__link_mobile">T</a>
-                </li>
-                <li class="nav__item"> 
-                    <a href="#StrongPoints" class="nav__link nav__link_desktop">Strong points</a> 
-                    <a href="#StrongPoints" class="nav__link nav__link_mobile">S</a>
-                </li>
-            </ul>
-            <button class="header__button" id="button-open" type="button" onclick="window.modal.showModal();">
-            <!-- здесь будет иконка -->
-            </button>
-        </nav>
+    <header class="header">
+        <div class="header__block">
+            <h1 class="header__title">Mod</h1>
+            <nav class="header__nav nav">
+                <ul class="nav__list-block" >
+                    <li class="nav__item"> 
+                        <a href="#Biography" class="nav__link nav__link_desktop">Biography</a> 
+                        <a href="#Biography" class="nav__link nav__link_mobile">B</a>
+                    </li>            
+                    <li class="nav__item"> 
+                        <a href="#Designers" class="nav__link nav__link_desktop">Designers</a>
+                        <a href="#Designers" class="nav__link nav__link_mobile">D</a> 
+                    </li>
+                    <li class="nav__item"> 
+                        <a href="#Testimonials" class="nav__link nav__link_desktop">Testimonials</a>
+                        <a href="#Testimonials" class="nav__link nav__link_mobile">T</a>
+                    </li>
+                    <li class="nav__item"> 
+                        <a href="#StrongPoints" class="nav__link nav__link_desktop">Strong points</a> 
+                        <a href="#StrongPoints" class="nav__link nav__link_mobile">S</a>
+                    </li>
+                </ul>
+                <button class="header__button" id="button-open" type="button" onclick="window.modal.showModal();">
+                <!-- здесь будет иконка -->
+                </button>
+            </nav>
+        </div>      
     </header>
 
 
@@ -234,10 +236,13 @@
         <h3 class="modal__title">Get in touch</h3>
         <p class="modal_text">Do you have any questions? Have something to say?</p> 
         <p class="modal_text">Don't be shy, write to us:</p>   
-        <button class="modal__button modal__button_cancel" id="button-close" onclick="window.modal.close()">Cancel</button>
-        <button class="modal__button modal__button_send">Send</button>
+        <form action="" method="post">
+            <button type="button" class="modal__button modal__button_cancel" id="button-close" onclick="window.modal.close()">Cancel</button>
+            <button class="modal__button modal__button_send">Send</button>
+        </form>
     </dialog>  
-  
+    <div class="popap-bcg"></div>
+    <script src="script.js"></script>
 
 </body>
 
