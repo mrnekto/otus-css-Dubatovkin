@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Playfair+Display:wght@400..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100..900&family=Playfair+Display:wght@400..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
@@ -15,7 +15,7 @@
 
 
 
-<body>
+<body >
 
 
 
@@ -40,6 +40,9 @@
                     <a href="#StrongPoints" class="nav__link nav__link_mobile">S</a>
                 </li>
             </ul>
+            <button class="header__button" id="button-open" type="button" onclick="window.modal.showModal();">
+            <!-- здесь будет иконка -->
+            </button>
         </nav>
     </header>
 
@@ -164,7 +167,7 @@
             <img class="testimonials__img" src="image/Testimonials-1.jpg" alt="Testimonials-1">
             <h3 class="testimonials__title">Testimonials</h3>
             <div class="testimonials__reviews-block">
-                <p class="testimonials__reviews-txt">I just really want to do good work and work with some great people, people who challenge me.</p>
+                <p class="testimonials__reviews-txt">I just really want to do good work and&nbsp;work with some great people, people who challenge me.</p>
                 <img class="testimonials__reviews-img" src="image/Testimonials-2.jpg" alt="Testimonials-2">
                 <img class="testimonials__reviews-img-mobile" src="image/mobile/Testimonials-mobile.jpg" alt="Testimonials-mobile">
             </div>
@@ -215,8 +218,7 @@
         </address>
         <div class="footer__logo">
             <span class="footer__logo-span footer__logo-span_first">A product of&nbsp;&nbsp;</span>
-            <span class="footer__logo-span footer__logo-span_second">MOD</span>
-            <!-- модификатор footer__logo-span_second можно удалить если нигде не используется -->
+            <span class="footer__logo-span">MOD</span>
         </div>
         <p class="footer__rights">
             <span class="footer__rights-span">&#169;</span> 
@@ -226,6 +228,20 @@
         
 
 
+
+
+    <dialog class="modal" id="modal">
+        <h3 class="modal__title">Get in touch</h3>
+        <p class="modal_text">Do you have any questions? Have something to say?</p> 
+        <p class="modal_text">Don't be shy, write to us:</p>   
+        <button class="modal__button modal__button_cancel" id="button-close" onclick="window.modal.close()">Cancel</button>
+        <button class="modal__button modal__button_send">Send</button>
+    </dialog>  
+  
+
 </body>
 
 </html>
+
+
+

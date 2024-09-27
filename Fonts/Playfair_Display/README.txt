@@ -1,36 +1,30 @@
-Bitter Variable Font
-====================
+Playfair Display Variable Font
+==============================
 
-This download contains Bitter as both variable fonts and static fonts.
+This download contains Playfair Display as both variable fonts and static fonts.
 
-Bitter is a variable font with this axis:
+Playfair Display is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  Bitter/Bitter-VariableFont_wght.ttf
-  Bitter/Bitter-Italic-VariableFont_wght.ttf
+  Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf
+  Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Bitter:
-  Bitter/static/Bitter-Thin.ttf
-  Bitter/static/Bitter-ExtraLight.ttf
-  Bitter/static/Bitter-Light.ttf
-  Bitter/static/Bitter-Regular.ttf
-  Bitter/static/Bitter-Medium.ttf
-  Bitter/static/Bitter-SemiBold.ttf
-  Bitter/static/Bitter-Bold.ttf
-  Bitter/static/Bitter-ExtraBold.ttf
-  Bitter/static/Bitter-Black.ttf
-  Bitter/static/Bitter-ThinItalic.ttf
-  Bitter/static/Bitter-ExtraLightItalic.ttf
-  Bitter/static/Bitter-LightItalic.ttf
-  Bitter/static/Bitter-Italic.ttf
-  Bitter/static/Bitter-MediumItalic.ttf
-  Bitter/static/Bitter-SemiBoldItalic.ttf
-  Bitter/static/Bitter-BoldItalic.ttf
-  Bitter/static/Bitter-ExtraBoldItalic.ttf
-  Bitter/static/Bitter-BlackItalic.ttf
+in those cases you can use the static font files for Playfair Display:
+  Playfair_Display/static/PlayfairDisplay-Regular.ttf
+  Playfair_Display/static/PlayfairDisplay-Medium.ttf
+  Playfair_Display/static/PlayfairDisplay-SemiBold.ttf
+  Playfair_Display/static/PlayfairDisplay-Bold.ttf
+  Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf
+  Playfair_Display/static/PlayfairDisplay-Black.ttf
+  Playfair_Display/static/PlayfairDisplay-Italic.ttf
+  Playfair_Display/static/PlayfairDisplay-MediumItalic.ttf
+  Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf
+  Playfair_Display/static/PlayfairDisplay-BoldItalic.ttf
+  Playfair_Display/static/PlayfairDisplay-ExtraBoldItalic.ttf
+  Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf
 
 Get started
 -----------
