@@ -150,13 +150,24 @@ html {
 .footer__rights {
     @include fonts-style-desktop ($Roboto, 400, 16px, 18.75px);
 }
- 
+.modal {
+    @include fonts-style-desktop ($Roboto, 400, 18px, 24px);
+} 
 .modal__title {
     @include fonts-style-desktop ($Roboto, 700, 24px, 28.13px);
 }
 .modal_text{
     @include fonts-style-desktop ($Roboto, 400, 18px, 24px);
 }
-.modal__button{
+.form__button{
     @include fonts-style-desktop ($Roboto, 500, 18px, 31.68px);
+}
+.form__label {
+    @include fonts-style-desktop ($Roboto, 500, 18px, 21.09px);
+}
+.form__input {
+    @include fonts-style-desktop ($Roboto, 400, 16px, 18.75px);
+}
+.form__textarea {
+    @include fonts-style-desktop ($Roboto, 400, 16px, 18.75px);
 }

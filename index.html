@@ -234,14 +234,23 @@
 
     <dialog class="modal" id="modal">
         <h3 class="modal__title">Get in touch</h3>
-        <p class="modal_text">Do you have any questions? Have something to say?</p> 
-        <p class="modal_text">Don't be shy, write to us:</p>   
-        <form action="" method="post">
-            <button type="button" class="modal__button modal__button_cancel" id="button-close" onclick="window.modal.close()">Cancel</button>
-            <button class="modal__button modal__button_send">Send</button>
+        <p class="modal_text">Do you have any questions? Have something to say?<br>Don't be shy, write to us:</p>   
+        <form class="modal__form form" action="#Biography" method="post" autocomplete="on">
+
+            <label for="modal-name" class="form__label">Name</label>
+                <input class="form__input form__input_name" id="modal-name" type="text" name="name" placeholder="3+ Characters" required>
+
+            <label for="modal-email" class="form__label">E-mail</label>
+                <input class="form__input form__input_email" id="modal-email" type="email" name="name" placeholder="name@email.com" required>
+
+            <label for="modal-textarea" class="form__label">Comment</label>
+                <textarea name="" class="form__textarea" id="modal-textarea" placeholder="Some text..."></textarea>
+                
+            <button type="button" class="form__button form__button_cancel" id="button-close" onclick="window.modal.close()">Cancel</button>
+            <button type="submit" class="form__button form__button_send">Send</button>
         </form>
     </dialog>  
-    <div class="popap-bcg"></div>
+    <div class="modal-background"></div>
     <script src="script.js"></script>
 
 </body>

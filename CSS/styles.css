@@ -44,30 +44,6 @@ address {
 }
 
 /* Form */
-input, textarea, button, select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button, input[type=submit] {
-  display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
-
-input:focus, input:active,
-button:focus, button:active {
-  outline: none;
-}
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -1061,9 +1037,10 @@ main {
   width: 480px;
   height: 588.45px;
   border-radius: 10px;
+  padding: 20px;
 }
 
-.modal__button {
+.form__button {
   position: absolute;
   bottom: 20px;
   display: inline-block;
@@ -1073,21 +1050,19 @@ main {
 }
 
 .modal__title {
-  margin-top: 20px;
-  margin-left: 20px;
   margin-bottom: 24px;
 }
 
 .modal_text {
-  margin-left: 20px;
+  margin-bottom: 24px;
 }
 
-.modal__button_cancel {
+.form__button_cancel {
   left: 50.46px;
   border: 1.32px solid black;
 }
 
-.modal__button_send {
+.form__button_send {
   right: 50.56px;
   color: white;
   background-color: black;
@@ -1105,7 +1080,7 @@ main {
   transform: rotate(2deg);
 }
 
-.popap-bcg {
+.modal-background {
   z-index: 120;
   display: none;
   position: fixed;
@@ -1115,8 +1090,31 @@ main {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.popap-bcg--open-modal {
+.modal-background--open-modal {
   display: block;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 24px;
+  padding: 6px 10px;
+}
+
+.form__textarea {
+  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  border-radius: 8px;
+  width: 100%;
+  height: 135px;
+  padding: 10px 10px;
+  margin-bottom: 24px;
 }
 
 html {
@@ -1543,6 +1541,13 @@ html {
   line-height: 18.75px;
 }
 
+.modal {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .modal__title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -1557,9 +1562,30 @@ html {
   line-height: 24px;
 }
 
-.modal__button {
+.form__button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 31.68px;
+}
+
+.form__label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
+}
+
+.form__input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+.form__textarea {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
 }/*# sourceMappingURL=styles.css.map */
