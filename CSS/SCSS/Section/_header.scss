@@ -34,15 +34,24 @@
 
 .nav__item {
     display: inline-block;
-    margin-right: max(20px, calc(10vw - 89px));
+    margin-left: max(20px, calc(10vw - 89px));
+    margin-right: min(0px, calc(-10vw + 144px)); 
 }
 
 .header__button {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-left: max(20px, calc(10vw - 89px));
     width: 54px;
     height: 54px;
-    border-radius: 4px;
-    border: 2px solid black;
 }
+.icon-modal:before {
+    content: "\e902";
+    font-size: 36px;
+    color: inherit;
+}
+
 
 @media (max-width: 767px) {
     .header {

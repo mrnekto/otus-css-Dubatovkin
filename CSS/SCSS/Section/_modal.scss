@@ -1,17 +1,9 @@
 .modal {
-    margin: 78px auto;
+    margin: max(10px, calc(100vh - 767px)) auto;
     width: 480px;
     height: 588.45px;
     border-radius: 10px;
     padding: 20px;
-}
-.form__button {
-    position: absolute;
-    bottom: 20px;
-    display: inline-block;
-    width: 179.54px;
-    height: 55.45px;
-    border-radius: 8px;
 }
 .modal__title {
     margin-bottom: 24px;
@@ -19,18 +11,8 @@
 .modal_text{
     margin-bottom: 24px;
 }
-.form__button_cancel {
-    left: 50.46px;
-    border: 1.32px solid black;
-}
-.form__button_send {
-    right: 50.56px;
-    color: white;
-    background-color: black;
-    text-align: center;
-}
 .modal::backdrop {
-    margin: 78px auto;
+    margin: max(10px, calc(100vh - 767px)) auto;
     width: 480px;
     height: 588.45px;
     background-color: transparent;
@@ -52,3 +34,4 @@
         display: block;
     }
 }
+

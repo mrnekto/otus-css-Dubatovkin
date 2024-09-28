@@ -1,3 +1,6 @@
+.form__input-block {
+    position: relative;
+}
 .form__label {
     display: block;
     margin-bottom: 5px;
@@ -16,5 +19,50 @@
     width: 100%;
     height: 135px;
     padding: 10px 10px;
+    padding-right: 40px;
     margin-bottom: 24px;
+}
+.form__button {
+    margin-top: -7px;
+    display: inline-block;
+    width: 179.54px;
+    height: 55.45px;
+    border-radius: 8px;
+}
+.form__button_cancel {
+    margin-left: 31px;
+    margin-right: 13px;
+    border: 1.32px solid black;
+    background-color: transparent;
+}
+.form__button_send {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+
+.icon-send:before {
+    content: "\e903";
+    color: #fff;
+    margin-right: 17px;
+}
+
+
+
+.form__icon {
+    position: absolute;
+    right: 12px;
+    stroke: #000000;
+    fill: #000000;
+}
+.form__icon_name {
+    margin-top: 8px;
+}
+.form__icon_email {
+    margin-top: 8px;
+}
+.form__icon_textarea {
+    margin-top: 11px;
 }

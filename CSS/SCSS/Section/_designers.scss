@@ -2,7 +2,9 @@
     padding-top: 148px;
 }
 .designers__title {
-    margin-left: max(60px, calc(40% - 437px)); 
+    max-width: 1680px;
+    margin: 0 auto;
+    padding-left: 139px; 
     padding-bottom: 30px;
 }   
 .designers__list {  
