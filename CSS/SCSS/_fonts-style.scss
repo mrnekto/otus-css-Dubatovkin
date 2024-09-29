@@ -87,27 +87,23 @@ html {
     @include fonts-style-desktop ($Roboto, 700, 24px, 28.13px);
     @include fonts-style-mobile ($Roboto, 700, 18px, 21.09px);
 }
-
 .biography__sect-title {
     @include fonts-style-desktop ($Playfair, 500, 86px, 114.64px);
     @include fonts-style-desktop-fixed ($Playfair, 500, 70px, 86px);
     @include fonts-style-mobile ($Playfair, 400, 64px, 85.31px);
     @include fonts-style-mobile-fixed ($Playfair, 400, 54px, 85.31px);
 }
-
 .biography__art {
     @include fonts-style-desktop ($Roboto, 500, 18px, 21.09px);
     @include fonts-style-tablet ($Roboto, 500, 16px, 21.09px);
     @include fonts-style-mobile ($Roboto, 500, 18px, 21.09px); 
 } 
-
 .biography__quote {
     @include fonts-style-desktop ($Bitter, 400, 26px, 31.2px);
     @include fonts-style-desktop-fixed ($Bitter, 400, 22px, 28px);
     @include fonts-style-tablet ($Bitter, 300, 30px, 36px);
     @include fonts-style-mobile-fixed ($Bitter, 300, 28px, 36px);
 } 
-
 .designers__title {
     @include fonts-style-desktop ($Roboto, 700, 24px, 28.13px);
     @include fonts-style-mobile ($Roboto, 700, 18px, 21.09px);
@@ -160,6 +156,7 @@ html {
         text-decoration: underline $white;
     }
 }
+
 .footer__logo-span {
     @include fonts-style-desktop ($Roboto, 900, 24px, 28.13px);
 }
