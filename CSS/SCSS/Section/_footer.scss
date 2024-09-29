@@ -17,6 +17,14 @@
 }  
 .footer__address-link {
     max-width: min-content;
+    transition: text-decoration 300ms;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline $black;
+    }
+    &:focus-visible {
+        outline: 2px solid $white; 
+    }
 }
 .footer__rights {
     text-align: right;

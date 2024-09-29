@@ -55,8 +55,7 @@ html {
 }
 .nav__link {
     color: $black;
-    text-decoration: underline $white;
-    
+    text-decoration: underline $white; 
 }
 .nav__link_desktop {
     @include fonts-style-desktop ($Roboto, 500, 24px, 28.13px);

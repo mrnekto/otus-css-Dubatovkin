@@ -1,6 +1,7 @@
+@import './SCSS/variables';
 @import './SCSS/reset';
 @import './SCSS/fonts';
-@import './SCSS/deleted';
+@import './SCSS/scrollbars';
 @import './SCSS/Section/html';
 @import './SCSS/Section/header';
 @import './SCSS/Section/hero';
@@ -11,5 +12,4 @@
 @import './SCSS/Section/footer';
 @import './SCSS/Section/modal';
 @import './SCSS/Section/form';
-@import './SCSS/psevdo';
 @import './SCSS/fonts-style';
