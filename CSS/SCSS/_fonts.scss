@@ -1,3 +1,15 @@
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$grey: rgb(128, 128, 128);
+$blue: rgb(0, 119, 255);
+$red: rgb(245, 98, 98);
+$green: rgb(98, 224, 98);
+$black-fon: rgba(0, 0, 0, 0.6);
+$blue-fon:  rgba(0, 119, 255, 0.1);
+$red-fon: rgba(245, 98, 98, 0.1);
+$green-fon: rgba(98, 224, 98, 0.1);
+
+
 @font-face {
   font-family: "Bitter";
   src: url("../Fonts/Bitter/Bitter-VariableFont_wght.ttf") format("ttf");

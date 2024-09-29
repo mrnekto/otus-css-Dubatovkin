@@ -44,6 +44,10 @@ address {
 }
 
 /* Form */
+*:focus, *:active {
+  outline: none;
+}
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -117,7 +121,7 @@ legend {
   height: 10px;
 }
 .designers__list::-webkit-scrollbar-track {
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
 .designers__list::-webkit-scrollbar-thumb {
   background-color: #666666;
@@ -128,7 +132,7 @@ legend {
   height: 10px;
 }
 .str-point__list-block::-webkit-scrollbar-track {
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
 .str-point__list-block::-webkit-scrollbar-thumb {
   background-color: #666666;
@@ -163,11 +167,11 @@ html::-webkit-scrollbar-thumb {
   width: 20px;
 }
 .modal::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: rgb(255, 255, 255);
   border-radius: 10px;
 }
 .modal::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 
@@ -200,7 +204,7 @@ main {
 }
 
 .header {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   position: sticky;
   top: 0;
@@ -243,8 +247,8 @@ main {
 }
 
 .header__button {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius: 4px;
   margin-left: max(20px, 10vw - 89px);
   width: 54px;
@@ -260,8 +264,8 @@ main {
 @media (max-width: 767px) {
   .header {
     height: 80px;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
   .header__block {
     height: 80px;
@@ -306,7 +310,7 @@ main {
   }
 }
 .hero {
-  background-color: #d6d4d0; /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
+  background-color: rgb(128, 128, 128); /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
   background-image: url(../image/Hero-section.jpg);
   background-repeat: no-repeat;
   background-position: left;
@@ -318,7 +322,7 @@ main {
 
 .hero__txt-block {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   margin: auto;
   width: max(690px, 20% + 402px);
   height: 360px;
@@ -422,7 +426,7 @@ main {
 .biography__rectangle {
   width: 20px;
   height: 6px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   margin-bottom: 18px;
 }
 
@@ -1004,8 +1008,8 @@ main {
 .footer {
   width: 100%;
   height: 168px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1019,6 +1023,11 @@ main {
 .footer__address {
   width: max(260px, 20%);
   margin-left: max(20px, 40% - 556px);
+}
+
+.footer__address-link {
+  max-width: -moz-min-content;
+  max-width: min-content;
 }
 
 .footer__rights {
@@ -1101,7 +1110,7 @@ main {
   height: 588.45px;
   background-color: transparent;
   opacity: 1;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   transform: rotate(2deg);
 }
@@ -1130,16 +1139,17 @@ main {
 }
 
 .form__input {
-  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  box-shadow: 0 0 0px 1px rgb(128, 128, 128);
   border-radius: 8px;
   width: 100%;
   height: 42px;
   margin-bottom: 24px;
   padding: 6px 10px;
+  padding-right: 50px;
 }
 
 .form__textarea {
-  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  box-shadow: 0 0 0px 1px rgb(128, 128, 128);
   border-radius: 8px;
   width: 100%;
   height: 135px;
@@ -1154,32 +1164,30 @@ main {
   width: 179.54px;
   height: 55.45px;
   border-radius: 8px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .form__button_cancel {
   margin-left: 31px;
   margin-right: 13px;
-  border: 1.32px solid black;
-  background-color: transparent;
 }
 
 .form__button_send {
-  color: white;
-  background-color: black;
   text-align: center;
 }
 
 .icon-send:before {
   content: "\e903";
-  color: #fff;
+  color: inherit;
   margin-right: 17px;
 }
 
 .form__icon {
   position: absolute;
   right: 12px;
-  stroke: #000000;
-  fill: #000000;
+  stroke: rgb(0, 0, 0);
+  fill: rgb(0, 0, 0);
 }
 
 .form__icon_name {
@@ -1192,6 +1200,146 @@ main {
 
 .form__icon_textarea {
   margin-top: 11px;
+}
+
+*:focus-visible {
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.nav__link:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  -webkit-text-decoration: underline rgb(0, 0, 0);
+          text-decoration: underline rgb(0, 0, 0);
+}
+.nav__link_mobile:hover {
+  font-weight: 700;
+}
+
+.header__button:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 1px 3px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.header__button:focus-visible {
+  box-shadow: 0 0 1px 3px rgb(0, 0, 0);
+  outline: none;
+}
+
+.footer__address-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__address-link:focus-visible {
+  outline: 2px solid rgb(255, 255, 255);
+}
+
+.form__input-block:hover > .form__input {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+.form__input-block:hover > .form__input:focus-visible {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 119, 255);
+  outline: none;
+  background-color: rgba(0, 119, 255, 0.1);
+}
+
+.form__input:valid {
+  border: none;
+  box-shadow: 0 0 1px 1px rgb(98, 224, 98);
+  outline: none;
+  background-color: rgba(98, 224, 98, 0.1);
+}
+.form__input:invalid {
+  border: none;
+  box-shadow: 0 0 1px 1px rgb(245, 98, 98);
+  outline: none;
+  background-color: rgba(245, 98, 98, 0.1);
+}
+.form__input:hover {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.form__input:focus-visible {
+  border: none;
+  box-shadow: 0 0 1px 1px rgb(0, 119, 255);
+  outline: none;
+  background-color: rgba(0, 119, 255, 0.1);
+}
+
+.form__input:valid ~ .form__icon {
+  stroke: rgb(98, 224, 98);
+  fill: rgb(98, 224, 98);
+}
+
+.form__input:invalid ~ .form__icon {
+  stroke: rgb(245, 98, 98);
+  fill: rgb(245, 98, 98);
+}
+
+.form__input-block:hover > .form__textarea {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+.form__input-block:hover > .form__textarea:focus-visible {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 119, 255);
+  outline: none;
+  background-color: rgba(0, 119, 255, 0.1);
+}
+
+.form__textarea:hover {
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.form__textarea:focus-visible {
+  border: none;
+  box-shadow: 0 0 1px 1px rgb(0, 119, 255);
+  outline: none;
+  background-color: rgba(0, 119, 255, 0.1);
+}
+
+.form__textarea:hover ~ .form__icon {
+  stroke: rgb(0, 0, 0);
+  fill: rgb(0, 0, 0);
+}
+
+.form__textarea:focus-visible ~ .form__icon {
+  stroke: rgb(0, 119, 255);
+  fill: rgb(0, 119, 255);
+}
+
+.form__input-block:has(> .form__input:invalid) ~ .form__button_send:hover {
+  color: rgb(245, 98, 98);
+  box-shadow: 0 0 1px 3px rgb(245, 98, 98);
+  background-color: transparent;
+}
+.form__input-block:has(> .form__input:invalid) ~ .form__button_send:active {
+  transform: scale(1);
+}
+
+.form__button:hover {
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 1px 3px rgb(0, 0, 0);
+  background-color: transparent;
+}
+.form__button:focus-visible {
+  box-shadow: 0 0 1px 3px rgb(0, 0, 0);
+  outline: none;
+}
+.form__button:active {
+  transform: scale(0.5);
 }
 
 html {
@@ -1231,17 +1379,9 @@ html {
 }
 
 .nav__link {
-  color: #000;
-  text-decoration: none;
-}
-.nav__link:hover {
-  color: #000;
-  cursor: pointer;
-  -webkit-text-decoration: underline #000;
-          text-decoration: underline #000;
-}
-.nav__link_mobile:hover {
-  font-weight: 700;
+  color: rgb(0, 0, 0);
+  -webkit-text-decoration: underline rgb(255, 255, 255);
+          text-decoration: underline rgb(255, 255, 255);
 }
 
 .nav__link_desktop {
@@ -1493,7 +1633,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
-  color: #000;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 @media (max-width: 385px) {
@@ -1588,13 +1728,9 @@ html {
   text-transform: uppercase;
 }
 .footer__address-link {
-  color: #ffffff;
-  -webkit-text-decoration: underline #ffffff;
-          text-decoration: underline #ffffff;
-}
-.footer__address:hover {
-  cursor: pointer;
-  text-decoration: none;
+  color: rgb(255, 255, 255);
+  -webkit-text-decoration: underline rgb(255, 255, 255);
+          text-decoration: underline rgb(255, 255, 255);
 }
 
 .footer__logo-span {

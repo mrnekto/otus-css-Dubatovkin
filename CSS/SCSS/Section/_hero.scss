@@ -1,5 +1,5 @@
 .hero {
-    background-color: #d6d4d0;  /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
+    background-color: $grey;  /* на MDN написано что создавать фон необходимо (для ситуаций с непрогрузкой фото) */
     background-image: url(../image/Hero-section.jpg);
     background-repeat: no-repeat;
     background-position: left;
@@ -10,7 +10,7 @@
 }
 .hero__txt-block {
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: $white;
     margin: auto;
     width: max(690px, calc(20% + 402px));
     height:360px;

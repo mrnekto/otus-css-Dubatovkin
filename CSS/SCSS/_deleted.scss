@@ -7,7 +7,7 @@
         height: 10px;
     }
     &::-webkit-scrollbar-track {
-        background: #fff; 
+        background: $white; 
     }
     &::-webkit-scrollbar-thumb {
         background-color: #666666; 
@@ -19,7 +19,7 @@
         height: 10px;
     }
     &::-webkit-scrollbar-track {
-        background: #fff; 
+        background: $white; 
     }
     &::-webkit-scrollbar-thumb {
         background-color: #666666; 
@@ -60,11 +60,11 @@ html {
         width: 20px;
     }
     &::-webkit-scrollbar-track {
-        background: #ffffff;
+        background: $white;
         border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: #000000; 
+        background-color: $black; 
         border-radius: 10px;
     }
 }

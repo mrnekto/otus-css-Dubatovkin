@@ -1,13 +1,45 @@
+$Playfair: "Playfair Display", serif;
+$Roboto: "Roboto", sans-serif;
+$Bitter: "Bitter", serif;
 
-// Перечислением классов не буду заниматься, напишу для каждого элемента отдельно правила (так в дальнейшем при необходимости будет легче что-то менять для конкретного элемента);
-
-// Отдельно миксин для ПК версии (без медиазапроса); @include fonts-style-desktop ("Roboto", sans-serif, 400, 16px, 16px);
-//  Создал дополнительно миксин (при ширине экрана 900px и меньше уменьшаю текст в некоторых секциях); @include fonts-style-desktop-fixed ("Roboto", sans-serif, 400, 16px, 16px);
-
-// Отдельно миксин для мобильной версии (в нем прописан медиазапрос); @include fonts-style-mobile ("Roboto", sans-serif, 400, 16px, 16px);
-//  Создал дополнительно миксин (при ширине экрана 385px и меньше уменьшаю текст в некоторых секциях); @include fonts-style-mobile-fixed ("Roboto", sans-serif, 400, 16px, 16px);
-
-// Отдельно миксин для планшетной версии (в нем прописан медиазапрос); @include fonts-style-tablet ("Roboto", sans-serif, 400, 16px, 16px);
+@mixin fonts-style-desktop ($famili, $font-weight, $font-size, $line-height) {
+    font-family: $famili;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+@mixin fonts-style-desktop-fixed ($famili, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 920px) {
+        font-family: $famili;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
+@mixin fonts-style-tablet ($famili, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 767px) {
+        font-family: $famili;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
+@mixin fonts-style-mobile ($famili, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 450px) {
+        font-family: $famili;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
+@mixin fonts-style-mobile-fixed ($famili, $font-weight, $font-size, $line-height) {  
+    @media (max-width: 385px) {
+        font-family: $famili;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: $line-height; 
+    } 
+}
 
 html {
     @include fonts-style-desktop ($Roboto, 400, 0px, 0px);
@@ -22,16 +54,9 @@ html {
     }
 }
 .nav__link {
-    color: #000;
-    text-decoration: none;
-    &:hover {
-        color: #000;
-        cursor: pointer;
-        text-decoration: underline #000;
-    }
-    &_mobile:hover {
-        font-weight: 700;
-    }
+    color: $black;
+    text-decoration: underline $white;
+    
 }
 .nav__link_desktop {
     @include fonts-style-desktop ($Roboto, 500, 24px, 28.13px);
@@ -105,7 +130,7 @@ html {
 .site-block__link {
     @include fonts-style-desktop ($Roboto, 400, 16px, 18.75px);
     @include fonts-style-mobile-fixed ($Roboto, 400, 14px, 18.75px); 
-    color: #000;
+    color: $black;
     text-decoration: none;
 }
 .testimonials__title {
@@ -131,14 +156,9 @@ html {
 .footer__address {
     @include fonts-style-desktop ($Roboto, 400, 16px, 26px);
     text-transform: uppercase;
-    
     &-link {
-        color: #ffffff;
-        text-decoration: underline #ffffff;
-    }
-    &:hover {
-        cursor: pointer;
-        text-decoration: none;
+        color: $white;
+        text-decoration: underline $white;
     }
 }
 .footer__logo-span {
