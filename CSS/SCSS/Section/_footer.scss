@@ -17,13 +17,15 @@
 }  
 .footer__address-link {
     max-width: min-content;
-    transition: text-decoration 300ms;
+    transition: outline 100ms, text-decoration 300ms;
     &:hover {
         cursor: pointer;
         text-decoration: underline $black;
+        transition: outline 100ms, text-decoration 300ms;
     }
     &:focus-visible {
-        outline: 2px solid $white; 
+        outline: 2px solid $white;
+        transition: outline 100ms, text-decoration 300ms; 
     }
 }
 .footer__rights {

@@ -64,9 +64,75 @@ legend {
 	display: block;
 }
 
+//Идет нормализация и унификация скроллбара
+
+
 *:focus-visible {
     outline: 2px solid $black; 
     outline-offset: 3px;
     border-radius: 4px;
-    transition: all 120ms;
+    transition: all 100ms;
+}
+.designers__list {  
+    &::-webkit-scrollbar { 
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $white; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #666666; 
+        border-radius: 20px; 
+    }
+}  
+.str-point__list-block {
+    &::-webkit-scrollbar { 
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $white; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #666666; 
+        border-radius: 20px; 
+    }
+} 
+.designers {
+    margin-bottom: -10px;
+}
+.str-point {
+    margin-bottom: -10px;
+}
+html {
+    &::-webkit-scrollbar {
+        width: 15px; 
+    }
+    &::-webkit-scrollbar-track {
+        background: #cacaca;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #666666; 
+    }
+} 
+@media (max-width: 767px) {
+    html {
+        &::-webkit-scrollbar {
+            width: 0px; 
+            height: 0px;
+        }
+    } 
+
+} 
+.modal {
+    &::-webkit-scrollbar {
+        width: 20px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $white;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $black; 
+        border-radius: 10px;
+    }
 }
