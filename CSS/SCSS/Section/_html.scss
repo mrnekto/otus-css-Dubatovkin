@@ -2,12 +2,24 @@ html {
     width: 100%;
     min-width: 350px;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
-body {
+.body {
+    width: 100%;
+    position: relative;
     display: flex; 
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
+    &--scroll-locked {
+        overflow: hidden;
+    }
 } 
+@media (max-width: 450px) {
+    .body {
+        margin-top: -355px;
+    } 
+}
 main {
-    flex-grow: 1;} 
+    flex-grow: 1;
+} 

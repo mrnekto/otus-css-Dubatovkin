@@ -2,7 +2,10 @@
     padding-top: 136px;
 }
 .str-point__title {
-    margin-left: max(60px, calc(40% - 318px));
+    margin: 0 auto;
+    max-width: 1680px;
+    padding-left: 258px;
+    // margin-left: max(60px, calc(40% - 318px));
     padding-bottom: 30px;
 }
 .str-point__list-block {

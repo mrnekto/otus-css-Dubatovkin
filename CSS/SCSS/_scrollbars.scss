@@ -7,10 +7,10 @@
         height: 10px;
     }
     &::-webkit-scrollbar-track {
-        background: #fff; 
+        background: $white; 
     }
     &::-webkit-scrollbar-thumb {
-        background-color: #c7c8ce; 
+        background-color: #666666; 
         border-radius: 20px; 
     }
 }  
@@ -19,10 +19,10 @@
         height: 10px;
     }
     &::-webkit-scrollbar-track {
-        background: #fff; 
+        background: $white; 
     }
     &::-webkit-scrollbar-thumb {
-        background-color: #c7c8ce; 
+        background-color: #666666; 
         border-radius: 20px; 
     }
 } 
@@ -32,19 +32,39 @@
 .str-point {
     margin-bottom: -10px;
 }
+
+html {
+    &::-webkit-scrollbar {
+        width: 15px; 
+    }
+    &::-webkit-scrollbar-track {
+        background: #cacaca;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #666666; 
+    }
+} 
+
 @media (max-width: 767px) {
     html {
         &::-webkit-scrollbar {
             width: 0px; 
-            height: 10px;
-        }
-        &::-webkit-scrollbar-track {
-            background: #fff; 
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: #c7c8ce; 
-            border-radius: 20px; 
+            height: 0px;
         }
     } 
 
 } 
+
+.modal {
+    &::-webkit-scrollbar {
+        width: 20px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $white;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $black; 
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+.modal {
+    margin: max(10px, calc(100vh - 767px)) auto;
+    width: 480px;
+    height: 588.45px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: display 1s allow-discrete,  overlay 1s allow-discrete, opacity 0.8s;
+    opacity: 0;
+}
+.modal::backdrop {
+    margin: max(10px, calc(100vh - 767px)) auto;
+    width: 480px;
+    height: 588.45px;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 10px;
+    transform: rotate(2deg);
+    transition: display 1s allow-discrete,  overlay 1s allow-discrete, opacity 1s, transform 2s;
+    opacity: 0;
+}
+.modal-background {
+    z-index: 120;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black-fon;
+    opacity: 0;
+    transition: display 1s allow-discrete,  overlay 1s allow-discrete, opacity 1s;
+    &--open-modal {
+        display: block;
+        opacity: 1;
+    }
+}
+[open]::backdrop {
+    opacity: 1;
+    transform: rotate(2deg);
+}
+[open] {
+    opacity: 1;
+}
+ @starting-style {
+    [open], [open]::backdrop, 
+    .modal-background
+    { 
+    opacity: 0;
+    transform: rotate(0deg);
+    }
+}
+.modal__title {
+    margin-bottom: 24px;
+}
+.modal_text{
+    margin-bottom: 24px;
+}
+
+
