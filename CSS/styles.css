@@ -64,63 +64,7 @@ legend {
   outline: 2px solid rgb(0, 0, 0);
   outline-offset: 3px;
   border-radius: 4px;
-  transition: all 120ms;
-}
-
-@font-face {
-  font-family: "Bitter";
-  src: url("../Fonts/Bitter/Bitter-VariableFont_wght.ttf") format("ttf");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../Fonts/Roboto/Roboto-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../Fonts/Roboto/Roboto-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../Fonts/Roboto/Roboto-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../Fonts/Roboto/Roboto-Black.ttf") format("ttf");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "icomoon";
-  src: url("../Fonts/icons/icomoon.eot?upe5bg");
-  src: url("../Fonts/icons/icomoon.eot?upe5bg#iefix") format("embedded-opentype"), url("../Fonts/icons/icomoon.ttf?upe5bg") format("truetype"), url("../Fonts/icons/icomoon.woff?upe5bg") format("woff"), url("../Fonts/icons/icomoon.svg?upe5bg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  transition: all 100ms;
 }
 
 .designers__list::-webkit-scrollbar {
@@ -179,6 +123,62 @@ html::-webkit-scrollbar-thumb {
 .modal::-webkit-scrollbar-thumb {
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
+}
+
+@font-face {
+  font-family: "Bitter";
+  src: url("../Fonts/Bitter/Bitter-VariableFont_wght.ttf") format("ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../Fonts/Roboto/Roboto-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../Fonts/icons/icomoon.eot?upe5bg");
+  src: url("../Fonts/icons/icomoon.eot?upe5bg#iefix") format("embedded-opentype"), url("../Fonts/icons/icomoon.ttf?upe5bg") format("truetype"), url("../Fonts/icons/icomoon.woff?upe5bg") format("woff"), url("../Fonts/icons/icomoon.svg?upe5bg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -253,23 +253,29 @@ main {
 }
 
 .nav__link {
-  transition: -webkit-text-decoration 300ms;
-  transition: text-decoration 300ms;
-  transition: text-decoration 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, -webkit-text-decoration 300ms;
 }
 .nav__link_mobile {
-  transition: font-weight 300ms, -webkit-text-decoration 300ms;
-  transition: text-decoration 300ms, font-weight 300ms;
-  transition: text-decoration 300ms, font-weight 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, font-weight 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms, -webkit-text-decoration 300ms;
 }
 .nav__link:hover {
   color: rgb(0, 0, 0);
   cursor: pointer;
   -webkit-text-decoration: underline rgb(0, 0, 0);
           text-decoration: underline rgb(0, 0, 0);
+  transition: outline 100ms, font-weight 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms, -webkit-text-decoration 300ms;
 }
 .nav__link_mobile:hover {
   font-weight: 700;
+  transition: outline 100ms, font-weight 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
+  transition: outline 100ms, text-decoration 300ms, font-weight 300ms, -webkit-text-decoration 300ms;
 }
 
 .header__button {
@@ -680,6 +686,7 @@ main {
   .designers__title {
     margin-left: 16px;
     padding-bottom: 32px;
+    padding-left: 0px;
   }
   .designers__list {
     padding-left: 16px;
@@ -1004,6 +1011,7 @@ main {
   .str-point__title {
     margin-left: 16px;
     padding-bottom: 32px;
+    padding-left: 0px;
   }
   .str-point__list-block {
     padding-left: 16px;
@@ -1073,17 +1081,23 @@ main {
 .footer__address-link {
   max-width: -moz-min-content;
   max-width: min-content;
-  transition: -webkit-text-decoration 300ms;
-  transition: text-decoration 300ms;
-  transition: text-decoration 300ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, -webkit-text-decoration 300ms;
 }
 .footer__address-link:hover {
   cursor: pointer;
   -webkit-text-decoration: underline rgb(0, 0, 0);
           text-decoration: underline rgb(0, 0, 0);
+  transition: outline 100ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, -webkit-text-decoration 300ms;
 }
 .footer__address-link:focus-visible {
   outline: 2px solid rgb(255, 255, 255);
+  transition: outline 100ms, -webkit-text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms;
+  transition: outline 100ms, text-decoration 300ms, -webkit-text-decoration 300ms;
 }
 
 .footer__rights {
@@ -1145,7 +1159,8 @@ main {
   }
 }
 .modal {
-  margin: max(10px, 100vh - 767px) auto;
+  margin: 0 auto;
+  margin-top: max(10px, (100vh - 588.45px) / 2);
   width: 480px;
   height: 588.45px;
   border-radius: 10px;
@@ -1155,7 +1170,8 @@ main {
 }
 
 .modal::backdrop {
-  margin: max(10px, 100vh - 767px) auto;
+  margin: 0 auto;
+  margin-top: max(10px, (100vh - 588.45px) / 2);
   width: 480px;
   height: 588.45px;
   background-color: transparent;
@@ -1311,6 +1327,7 @@ main {
   padding-right: 40px;
   margin-bottom: 24px;
   transition: all 500ms;
+  resize: none;
 }
 .form__textarea:hover {
   border: none;
@@ -1398,6 +1415,38 @@ main {
   margin-top: 11px;
 }
 
+@media (max-width: 767px) {
+  .modal__title,
+  .modal_text,
+  .form__input-block,
+  .form__button_send {
+    display: none;
+  }
+  .modal {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: calc((100vh - 55.45px) / 2);
+    width: 179.54px;
+    height: 55.45px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 0px;
+    transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 0.8s;
+  }
+  .modal::backdrop {
+    display: none;
+  }
+  .form__button_cancel {
+    margin: 0 auto;
+    outline: rgb(255, 255, 255) solid 3px;
+    outline-offset: -3px;
+  }
+}
+@media (max-height: 630px) {
+  .modal::backdrop {
+    display: none;
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;

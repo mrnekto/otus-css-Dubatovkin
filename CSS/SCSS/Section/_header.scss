@@ -38,17 +38,19 @@
     margin-right: min(0px, calc(-10vw + 144px)); 
 }
 .nav__link{
-    transition: text-decoration 300ms;
+    transition: outline 100ms, text-decoration 300ms;
     &_mobile {
-        transition: text-decoration 300ms, font-weight 300ms;
+        transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
     } 
     &:hover {
         color: $black;
         cursor: pointer;
         text-decoration: underline $black;
+        transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
     }
     &_mobile:hover {
         font-weight: 700;
+        transition: outline 100ms, text-decoration 300ms, font-weight 300ms;
     }
 }
 .header__button {
