@@ -13,10 +13,8 @@ btnCloseModal.addEventListener('click', handleModalSwitch);
 
 
 document.addEventListener('keydown', event => {
-    if (event.key === "Escape") 
+    if (event.key === "Escape") {
       modalBack.classList.remove('modal-background--open-modal');
-    if (event.key === "Escape")
       body.classList.remove('body--scroll-locked');
-  });
-
-
+    }
+});

@@ -686,6 +686,7 @@ main {
   .designers__title {
     margin-left: 16px;
     padding-bottom: 32px;
+    padding-left: 0px;
   }
   .designers__list {
     padding-left: 16px;
@@ -1010,6 +1011,7 @@ main {
   .str-point__title {
     margin-left: 16px;
     padding-bottom: 32px;
+    padding-left: 0px;
   }
   .str-point__list-block {
     padding-left: 16px;
@@ -1325,6 +1327,7 @@ main {
   padding-right: 40px;
   margin-bottom: 24px;
   transition: all 500ms;
+  resize: none;
 }
 .form__textarea:hover {
   border: none;
@@ -1412,6 +1415,38 @@ main {
   margin-top: 11px;
 }
 
+@media (max-width: 767px) {
+  .modal__title,
+  .modal_text,
+  .form__input-block,
+  .form__button_send {
+    display: none;
+  }
+  .modal {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: calc((100vh - 55.45px) / 2);
+    width: 179.54px;
+    height: 55.45px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 0px;
+    transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 0.8s;
+  }
+  .modal::backdrop {
+    display: none;
+  }
+  .form__button_cancel {
+    margin: 0 auto;
+    outline: rgb(255, 255, 255) solid 3px;
+    outline-offset: -3px;
+  }
+}
+@media (max-height: 630px) {
+  .modal::backdrop {
+    display: none;
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;

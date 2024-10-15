@@ -20,6 +20,7 @@
     transition: display 1s allow-discrete,  overlay 1s allow-discrete, opacity 1s, transform 2s;
     opacity: 0;
 }
+
 .modal-background {
     z-index: 120;
     display: none;
@@ -160,6 +161,7 @@
     padding-right: 40px;
     margin-bottom: 24px;
     transition: all $time;
+    resize: none;
     &:hover {
         border: none;
         box-shadow: 0 0 1px 2px $black;
@@ -240,5 +242,37 @@
 .form__icon_textarea {
     margin-top: 11px;
 }
-
+@media (max-width: 767px) {
+    .modal__title,
+    .modal_text,
+    .form__input-block,
+    .form__button_send {
+        display: none;
+    }
+    .modal {
+        max-width: 350px;
+        margin: 0 auto;
+        margin-top: calc((100vh - 55.45px) / 2);
+        width: 179.54px;
+        height: 55.45px;
+        background-color: $white;
+        border-radius: 8px;
+        padding: 0px;
+        transition: display 1s allow-discrete,  overlay 1s allow-discrete, opacity 0.8s;
+    } 
+    .modal::backdrop {
+        display: none;
+    }
+    .form__button_cancel {
+        margin: 0 auto;
+        outline: $white solid 3px;
+        outline-offset: -3px;
+    }
+}
+//Хотел сделать чтобы при переходе от ПК-версии к планшетной модалка автоматически закрывалась, но нужен JS, либо переверстать модалку с одной кнопкой 
+@media (max-height: 630px) {
+    .modal::backdrop {
+      display: none;
+    }
+}
 
